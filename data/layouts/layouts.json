@@ -4420,6 +4420,26 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/QuietWoods/border.bin",
       "blockdata_filepath": "data/layouts/QuietWoods/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_TOWN",
+      "name": "FernetTown_Layout",
+      "width": 30,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/FernetTown/border.bin",
+      "blockdata_filepath": "data/layouts/FernetTown/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE",
+      "name": "BerryVillage_Layout",
+      "width": 30,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Lilycove",
+      "border_filepath": "data/layouts/BerryVillage/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage/map.bin"
     }
   ]
 }

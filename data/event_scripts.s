@@ -1057,3 +1057,7 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/text/birch_speech.inc"
 
 	.include "data/maps/QuietWoods/scripts.inc"
+
+	.include "data/maps/FernetTown/scripts.inc"
+
+	.include "data/maps/BerryVillage/scripts.inc"
