@@ -201,6 +201,7 @@ static const u8 sMapName_TrainerHill[] = _("TRAINER HILL");
 static const u8 sMapName_QuietWoods[] = _("QUIET WOODS");
 static const u8 sMapName_FernetTown[] = _("FERNET TOWN");
 static const u8 sMapName_BerryVillage[] = _("BERRY VILLAGE");
+static const u8 sMapName_PyrePromenade[] = _("PYRE PROMENADE");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]             = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -289,6 +290,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_POKEMON_MANSION]            = {0, 0, 1, 1, sMapName_PokemonMansion},
     [MAPSEC_POKEMON_TOWER]              = {0, 0, 1, 1, sMapName_PokemonTower},
     [MAPSEC_POWER_PLANT]                = {0, 0, 1, 1, sMapName_PowerPlant},
+    [MAPSEC_PYRE_PROMENADE]             = {16, 5, 1, 1, sMapName_PyrePromenade},
     [MAPSEC_QUIET_WOODS]                = {5, 11, 1, 1, sMapName_QuietWoods},
     [MAPSEC_RESORT_GORGEOUS]            = {0, 0, 1, 1, sMapName_ResortGorgeous},
     [MAPSEC_RIXY_CHAMBER]               = {0, 0, 1, 1, sMapName_RixyChamber},
