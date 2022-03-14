@@ -20,8 +20,13 @@
     },
     {
       "direction": "down",
-      "offset": -100,
+      "offset": -75,
       "map": "MAP_ROUTE123"
+    },
+    {
+      "direction": "right",
+      "offset": 10,
+      "map": "MAP_PYRE_PROMENADE"
     }
   ],
   "object_events": [

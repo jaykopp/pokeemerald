@@ -1063,3 +1063,11 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/BerryVillage/scripts.inc"
 
 	.include "data/maps/PyrePromenade/scripts.inc"
+
+	.include "data/maps/FernetTown_PlayersHouse/scripts.inc"
+
+	.include "data/maps/FernetTown_RivalsHouse/scripts.inc"
+
+	.include "data/maps/FernetTown_HidingSpot/scripts.inc"
+
+	.include "data/maps/FernetTown_Cave/scripts.inc"

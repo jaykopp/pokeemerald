@@ -4444,12 +4444,52 @@
     {
       "id": "LAYOUT_PYRE_PROMENADE",
       "name": "PyrePromenade_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 60,
+      "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lilycove",
       "border_filepath": "data/layouts/PyrePromenade/border.bin",
       "blockdata_filepath": "data/layouts/PyrePromenade/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_TOWN_PLAYERS_HOUSE",
+      "name": "FernetTown_PlayersHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FernetTown_PlayersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FernetTown_PlayersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_TOWN_RIVALS_HOUSE",
+      "name": "FernetTown_RivalsHouse_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/FernetTown_RivalsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/FernetTown_RivalsHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_TOWN_HIDING_SPOT",
+      "name": "FernetTown_HidingSpot_Layout",
+      "width": 15,
+      "height": 6,
+      "primary_tileset": "gTileset_SecretBase",
+      "secondary_tileset": "gTileset_SecretBaseShrub",
+      "border_filepath": "data/layouts/FernetTown_HidingSpot/border.bin",
+      "blockdata_filepath": "data/layouts/FernetTown_HidingSpot/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_TOWN_CAVE",
+      "name": "FernetTown_Cave_Layout",
+      "width": 28,
+      "height": 17,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/FernetTown_Cave/border.bin",
+      "blockdata_filepath": "data/layouts/FernetTown_Cave/map.bin"
     }
   ]
 }

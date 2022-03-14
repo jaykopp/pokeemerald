@@ -23,7 +23,34 @@
 
   ],
   "warp_events": [
-
+    {
+      "x": 27,
+      "y": 5,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_TOWN_PLAYERS_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 20,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_TOWN_RIVALS_HOUSE",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_TOWN",
+      "dest_warp_id": 0
+    },
+    {
+      "x": 22,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_TOWN_CAVE",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

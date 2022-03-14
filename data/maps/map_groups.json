@@ -97,7 +97,11 @@
     "QuietWoods",
     "FernetTown",
     "BerryVillage",
-    "PyrePromenade"
+    "PyrePromenade",
+    "FernetTown_PlayersHouse",
+    "FernetTown_RivalsHouse",
+    "FernetTown_HidingSpot",
+    "FernetTown_Cave"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

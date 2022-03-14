@@ -15,8 +15,13 @@
   "connections": [
     {
       "direction": "left",
-      "offset": 0,
+      "offset": -10,
       "map": "MAP_ROUTE122"
+    },
+    {
+      "direction": "up",
+      "offset": 20,
+      "map": "MAP_LILYCOVE_CITY"
     }
   ],
   "object_events": [
