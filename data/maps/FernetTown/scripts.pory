@@ -1,0 +1,10 @@
+mapscripts FernetTown_MapScripts {
+}
+
+script FernetTown_Sign {
+    lock
+    msgbox("Fernet Town", MSGBOX_SIGN)
+    release
+    end
+}
+
