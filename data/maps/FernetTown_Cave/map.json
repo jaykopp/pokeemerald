@@ -26,7 +26,7 @@
     },
     {
       "x": 4,
-      "y": 10,
+      "y": 9,
       "elevation": 0,
       "dest_map": "MAP_FERNET_TOWN_CAVE",
       "dest_warp_id": 0

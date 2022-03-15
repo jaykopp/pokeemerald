@@ -8,3 +8,15 @@ script FernetTown_Sign {
     end
 }
 
+script FernetTown_Girl {
+    lock
+    faceplayer
+    checkplayergender
+    if (var(VAR_RESULT) == MALE) {
+        msgbox("Hey guy")
+    } else {
+        msgbox(format("Hey girl"))
+    }
+    releaseall
+    end
+}
