@@ -2,7 +2,7 @@
   "id": "MAP_FERNET_TOWN_HIDING_SPOT",
   "name": "FernetTown_HidingSpot",
   "layout": "LAYOUT_FERNET_TOWN_HIDING_SPOT",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_ABNORMAL_WEATHER",
   "region_map_section": "MAPSEC_FERNET_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

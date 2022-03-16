@@ -1,0 +1,44 @@
+mapscripts FernetTown_RivalsHouse_MapScripts {
+
+}
+
+script FernetTown_RivalsHouse_OldMan {
+    lock
+    faceplayer
+    msgbox("Want a pokemon?", MSGBOX_YESNO)
+    if (var(VAR_RESULT)==NO){
+        msgbox("No worries.")
+    } 
+    else {
+        givemon (SPECIES_MACHOP, 5, ITEM_ORAN_BERRY)
+        if (var(VAR_RESULT)==0){
+            call (FernetTown_RivalsHouse_Fanfare)
+            msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+            if (var(VAR_RESULT)==YES){
+                call (Common_EventScript_GetGiftMonPartySlot)
+                call (Common_EventScript_NameReceivedPartyMon)
+            }
+        } elif(var(VAR_RESULT) == 1){
+            call (FernetTown_RivalsHouse_Fanfare)
+            msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+            if (var(VAR_RESULT)==YES){
+                call (Common_EventScript_NameReceivedPartyMon)
+            }
+            call (Common_EventScript_TransferredToPC)
+        } else{
+            goto (Common_EventScript_NoMoreRoomForPokemon)
+        }
+    }
+    releaseall
+    end
+}
+
+script FernetTown_RivalsHouse_Fanfare {
+    bufferspeciesname(1, SPECIES_MACHOP)
+    playfanfare (MUS_CAUGHT)
+    message ("{PLAYER} obtained Machop!")
+    waitmessage
+    waitfanfare
+    bufferspeciesname(0, SPECIES_MACHOP)
+    return
+}
