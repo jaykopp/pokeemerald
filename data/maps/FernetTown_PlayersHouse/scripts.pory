@@ -1,0 +1,11 @@
+mapscripts FernetTown_PlayersHouse_MapScripts {
+
+}
+
+script FernetTown_PlayersHouse_Dad {
+    lockall
+    faceplayer
+    msgbox(format("I hope your journey will help you grow as a person"))
+    releaseall
+    end
+}

@@ -1,0 +1,18 @@
+mapscripts FernetTown_Cave_MapScripts {
+}
+
+script FernetTown_OldLady {
+    lockall
+    faceplayer
+    msgbox(format("We used to live in secret, but recently more people have discovered this place."))
+    releaseall
+    end
+}
+
+script FernetTown_Guard {
+    lockall
+    faceplayer
+    msgbox(format("We used to live in secret, but recently more people have discovered this place."))
+    releaseall
+    end
+}
