@@ -4490,6 +4490,66 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/FernetTown_Cave/border.bin",
       "blockdata_filepath": "data/layouts/FernetTown_Cave/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE_BERRY_MASTERS_HOUSE",
+      "name": "BerryVillage_BerryMastersHouse_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BerryVillage_BerryMastersHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage_BerryMastersHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE_HOUSE1",
+      "name": "BerryVillage_House1_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BerryVillage_House1/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage_House1/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE_CONSTRUCTION_HOUSE",
+      "name": "BerryVillage_ConstructionHouse_Layout",
+      "width": 12,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/BerryVillage_ConstructionHouse/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage_ConstructionHouse/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE_POKEMON_CENTER",
+      "name": "BerryVillage_PokemonCenter_Layout",
+      "width": 14,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/BerryVillage_PokemonCenter/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage_PokemonCenter/map.bin"
+    },
+    {
+      "id": "LAYOUT_BERRY_VILLAGE_MART",
+      "name": "BerryVillage_Mart_Layout",
+      "width": 11,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Shop",
+      "border_filepath": "data/layouts/BerryVillage_Mart/border.bin",
+      "blockdata_filepath": "data/layouts/BerryVillage_Mart/map.bin"
     }
   ]
 }
