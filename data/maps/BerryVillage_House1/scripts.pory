@@ -1,0 +1,10 @@
+mapscripts BerryVillage_House1_MapScripts {
+}
+
+script BerryVillage_House1_BlendMaster {
+    lock
+    faceplayer
+    msgbox(format("They call me the Blend Master. I moved here after I heard about the Berry Master next door. With his magnificient berry knowledge I can create all the pokeblocks I want to."))
+    releaseall
+    end
+}

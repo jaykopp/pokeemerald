@@ -4492,16 +4492,6 @@
       "blockdata_filepath": "data/layouts/FernetTown_Cave/map.bin"
     },
     {
-      "id": "LAYOUT_NEW_MAP1",
-      "name": "NewMap1_Layout",
-      "width": 11,
-      "height": 8,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/NewMap1/border.bin",
-      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
-    },
-    {
       "id": "LAYOUT_BERRY_VILLAGE_BERRY_MASTERS_HOUSE",
       "name": "BerryVillage_BerryMastersHouse_Layout",
       "width": 11,

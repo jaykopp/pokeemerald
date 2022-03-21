@@ -1,0 +1,10 @@
+mapscripts BerryVillage_BerryMastersHouse_MapScripts {
+}
+
+script BerryVillage_BerryMastersHouse_BerryMaster {
+    lock
+    faceplayer
+    msgbox(format("You may call me the Berry Master. I dream of filling the world with beautiful flowers, so I raise Berries and hand them out to everyone. You’re deserving of one!"))
+    releaseall
+    end
+}

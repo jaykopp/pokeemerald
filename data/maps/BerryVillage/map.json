@@ -60,7 +60,7 @@
       "x": 25,
       "y": 16,
       "elevation": 0,
-      "dest_map": "MAP_BERRY_VILLAGE",
+      "dest_map": "MAP_BERRY_VILLAGE_CONSTRUCTION_HOUSE",
       "dest_warp_id": 0
     }
   ],

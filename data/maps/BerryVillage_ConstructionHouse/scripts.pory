@@ -1,0 +1,34 @@
+mapscripts BerryVillage_ConstructionHouse_MapScripts {
+}
+
+script BerryVillage_ConstructionHouse_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("This village has grown out of the construction work.\n I wonder what will happen with it once the job is done?"))
+    releaseall
+    end
+}
+
+script BerryVillage_ConstructionHouse_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("I am telling you, constructing this road between LILYCOVE and MAUVILLE has been tough!\n I can't wait for it to be over!"))
+    releaseall
+    end
+}
+
+script BerryVillage_ConstructionHouse_Dad {
+    lock
+    faceplayer
+    msgbox(format("My son has a real knack for POKéMON battling.\n I am sure he will become a great trainer some day."))
+    releaseall
+    end
+}
+
+script BerryVillage_ConstructionHouse_BerryBoy {
+    lock
+    faceplayer
+    msgbox(format("Please battle me mister!"))
+    releaseall
+    end
+}
