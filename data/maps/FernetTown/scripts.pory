@@ -20,3 +20,9 @@ script FernetTown_Girl {
     releaseall
     end
 }
+
+script FernetTown_Marcus {
+    trainerbattle_single(TRAINER_MARCUS, "Fight me!", "Whaaaaa!")
+    msgbox("You are dead to me.", MSGBOX_AUTOCLOSE)
+    end
+}

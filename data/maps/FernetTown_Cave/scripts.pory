@@ -12,7 +12,7 @@ script FernetTown_OldLady {
 script FernetTown_Guard {
     lockall
     faceplayer
-    msgbox(format("We used to live in secret, but recently more people have discovered this place."))
+    msgbox(format("I'm sorry, but I cannot allow you to enter before you have proven yourself worthy."))
     releaseall
     end
 }

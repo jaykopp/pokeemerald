@@ -239,7 +239,9 @@
 #define TRAINER_BLAKE                       235
 #define TRAINER_WILLIAM                     236
 #define TRAINER_JOSHUA                      237
-#define TRAINER_CAMERON_1                   238
+#define TRAINER_MARCUS                      238
+
+#define TRAINER_CAMERON_1                   238 // Change this one
 #define TRAINER_CAMERON_2                   239
 #define TRAINER_CAMERON_3                   240
 #define TRAINER_CAMERON_4                   241

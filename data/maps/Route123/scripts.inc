@@ -57,26 +57,26 @@ Route123_EventScript_Violet::
 	msgbox Route123_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Cameron::
-	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchCameron
-	msgbox Route123_Text_CameronPostBattle, MSGBOX_DEFAULT
-	release
-	end
+// Route123_EventScript_Cameron::
+// 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
+// 	specialvar VAR_RESULT, ShouldTryRematchBattle
+// 	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchCameron
+// 	msgbox Route123_Text_CameronPostBattle, MSGBOX_DEFAULT
+// 	release
+// 	end
 
-Route123_EventScript_RegisterCameron::
-	special PlayerFaceTrainerAfterBattle
-	waitmovement 0
-	msgbox Route123_Text_CameronRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_CAMERON_1
-	release
-	end
+// Route123_EventScript_RegisterCameron::
+// 	special PlayerFaceTrainerAfterBattle
+// 	waitmovement 0
+// 	msgbox Route123_Text_CameronRegister, MSGBOX_DEFAULT
+// 	register_matchcall TRAINER_CAMERON_1
+// 	release
+// 	end
 
-Route123_EventScript_RematchCameron::
-	trainerbattle_rematch TRAINER_CAMERON_1, Route123_Text_CameronRematchIntro, Route123_Text_CameronRematchDefeat
-	msgbox Route123_Text_CameronPostRematch, MSGBOX_AUTOCLOSE
-	end
+// Route123_EventScript_RematchCameron::
+// 	trainerbattle_rematch TRAINER_CAMERON_1, Route123_Text_CameronRematchIntro, Route123_Text_CameronRematchDefeat
+// 	msgbox Route123_Text_CameronPostRematch, MSGBOX_AUTOCLOSE
+// 	end
 
 Route123_EventScript_Jacki::
 	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki

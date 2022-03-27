@@ -25,6 +25,12 @@ FernetTown_Girl_2:
 	goto FernetTown_Girl_1
 
 
+FernetTown_Marcus::
+	trainerbattle_single TRAINER_MARCUS, FernetTown_Marcus_Text_0, FernetTown_Marcus_Text_1
+	msgbox FernetTown_Marcus_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
 FernetTown_Sign_Text_0:
 	.string "Fernet Town$"
 
@@ -33,3 +39,12 @@ FernetTown_Girl_Text_0:
 
 FernetTown_Girl_Text_1:
 	.string "Hey girl$"
+
+FernetTown_Marcus_Text_0:
+	.string "Fight me!$"
+
+FernetTown_Marcus_Text_1:
+	.string "Whaaaaa!$"
+
+FernetTown_Marcus_Text_2:
+	.string "You are dead to me.$"
