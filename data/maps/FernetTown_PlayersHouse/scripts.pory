@@ -5,7 +5,8 @@ mapscripts FernetTown_PlayersHouse_MapScripts {
 script FernetTown_PlayersHouse_Dad {
     lockall
     faceplayer
-    msgbox(format("I hope your journey will help you grow as a person"))
+    setflag (FLAG_SYS_B_DASH)
+    msgbox(format("I hope your journey will help you grow as a person. Here is a pair of RUNNING SHOES."))
     releaseall
     end
 }

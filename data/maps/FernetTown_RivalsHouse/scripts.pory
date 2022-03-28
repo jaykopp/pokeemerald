@@ -10,6 +10,7 @@ script FernetTown_RivalsHouse_OldMan {
         msgbox("No worries.")
     } 
     else {
+        setflag (FLAG_SYS_POKEMON_GET)
         givemon (SPECIES_MACHOP, 5, ITEM_ORAN_BERRY)
         if (var(VAR_RESULT)==0){
             call (FernetTown_RivalsHouse_Fanfare)

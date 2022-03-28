@@ -3504,16 +3504,17 @@ Route123_Text_FernandoPostRematch:
 	.string "by my tune, you'd lose.$"
 
 Route123_Text_DavisIntro:
-	.string "This is my awesome BUG POKéMON!\n"
-	.string "My big brother got it for me.$"
+	.string "I caught these POKéMON myself!\n"
+	.string "We will win together.$"
 
 Route123_Text_DavisDefeat:
-	.string "Waaaah!\n"
-	.string "You meanie!$"
+	.string "Noooo!\n"
+	.string "How could we lose?$"
 
 Route123_Text_DavisPostBattle:
-	.string "Don't tell my brother I lost.\n"
-	.string "You have to keep it a secret!$"
+	.string "Although I am proud I caught my\n"
+	.string "POKéMON myself, we will have to try\l$"
+	.string "harder next time.$"
 
 Route123_Text_JazmynIntro:
 	.string "My confidence will get a boost by\n"
@@ -3555,16 +3556,15 @@ Route123_Text_AlbertoPostBattle:
 	.string "BIRD POKéMON feathers.$"
 
 Route123_Text_EdIntro:
-	.string "When there are no TRAINERS around,\n"
-	.string "I let my POKéMON battle each other.\l"
-	.string "I watch them.$"
+	.string "I got lost in these woods. \n"
+	.string "Fortunately I caught a new POKéMON!$"
 
 Route123_Text_EdDefeat:
-	.string "I kind of like your POKéMON.$"
+	.string "Seems my new POKéMON couldn't win...$"
 
 Route123_Text_EdPostBattle:
-	.string "Hehe, I'm swiping your battling ideas!\n"
-	.string "I think they'll make me better.$"
+	.string "I think I'm growing a liking to \n"
+	.string "these woods.$"
 
 Route123_Text_JonasIntro:
 	.string "I lay in ambush, and a TRAINER has\n"

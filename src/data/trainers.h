@@ -184,9 +184,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_ED] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_COLLECTOR,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_SUSPICIOUS,
-        .trainerPic = TRAINER_PIC_COLLECTOR,
+        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_BUG_CATCHER,
         .trainerName = _("ED"),
         .items = {},
         .doubleBattle = FALSE,
@@ -3345,18 +3345,18 @@ const struct Trainer gTrainers[] = {
         .party = {.NoItemDefaultMoves = sParty_Marcus},
     },
 
-    [TRAINER_CAMERON_2] =
+    [TRAINER_JIMMY] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_PSYCHIC,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_NINJA_BOY,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_PSYCHIC_M,
-        .trainerName = _("CAMERON"),
+        .trainerPic = TRAINER_PIC_NINJA_BOY,
+        .trainerName = _("JIMMY"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Cameron2),
-        .party = {.NoItemDefaultMoves = sParty_Cameron2},
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_Jimmy),
+        .party = {.ItemCustomMoves = sParty_Jimmy},
     },
 
     [TRAINER_CAMERON_3] =
@@ -7548,9 +7548,9 @@ const struct Trainer gTrainers[] = {
     [TRAINER_DAVIS] =
     {
         .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
         .trainerName = _("DAVIS"),
         .items = {},
         .doubleBattle = FALSE,

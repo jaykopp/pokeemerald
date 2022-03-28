@@ -8,6 +8,7 @@ FernetTown_RivalsHouse_OldMan::
 	msgbox FernetTown_RivalsHouse_OldMan_Text_0, MSGBOX_YESNO
 	compare VAR_RESULT, NO
 	goto_if_eq FernetTown_RivalsHouse_OldMan_2
+	setflag FLAG_SYS_POKEMON_GET
 	givemon SPECIES_MACHOP, 5, ITEM_ORAN_BERRY
 	compare VAR_RESULT, 0
 	goto_if_eq FernetTown_RivalsHouse_OldMan_5
