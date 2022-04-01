@@ -16,16 +16,55 @@
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_SPENSER",
-      "x": 6,
-      "y": 3,
+      "x": 4,
+      "y": 4,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_RIGHT_AND_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "FernetTown_RivalsHouse_OldMan",
+      "script": "FernetTown_RivalsHouse_TownElder",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 1,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FernetTown_RivalsHouse_Treecko",
+      "flag": "FLAG_HIDE_FERNET_TOWN_TREECKO"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 2,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FernetTown_RivalsHouse_Torchic",
+      "flag": "FLAG_HIDE_FERNET_TOWN_TORCHIC"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 3,
+      "y": 2,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "FernetTown_RivalsHouse_Mudkip",
+      "flag": "FLAG_HIDE_FERNET_TOWN_MUDKIP"
     }
   ],
   "warp_events": [
@@ -45,7 +84,51 @@
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_FERNET_RIVAL_HOUSE_STATE",
+      "var_value": "1",
+      "script": "FernetTown_RivalsHouse_PreventExitSouth"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 6,
+      "elevation": 0,
+      "var": "VAR_FERNET_RIVAL_HOUSE_STATE",
+      "var_value": "1",
+      "script": "FernetTown_RivalsHouse_PreventExitEast"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 5,
+      "elevation": 0,
+      "var": "VAR_FERNET_RIVAL_HOUSE_STATE",
+      "var_value": "1",
+      "script": "FernetTown_RivalsHouse_PreventExitEast"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 4,
+      "elevation": 0,
+      "var": "VAR_FERNET_RIVAL_HOUSE_STATE",
+      "var_value": "1",
+      "script": "FernetTown_RivalsHouse_PreventExitEast"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_FERNET_RIVAL_HOUSE_STATE",
+      "var_value": "1",
+      "script": "FernetTown_RivalsHouse_PreventExitSouth"
+    }
   ],
   "bg_events": [
 

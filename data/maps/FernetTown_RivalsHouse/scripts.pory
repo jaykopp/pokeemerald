@@ -1,45 +1,238 @@
-mapscripts FernetTown_RivalsHouse_MapScripts {
+const LOCALID_TOWN_ELDER = 1
 
+mapscripts FernetTown_RivalsHouse_MapScripts {
+    MAP_SCRIPT_ON_FRAME_TABLE[
+        VAR_FERNET_RIVAL_HOUSE_STATE, 0: FernetTown_RivalsHouse_StarterPick
+    ]
 }
 
-script FernetTown_RivalsHouse_OldMan {
+script FernetTown_RivalsHouse_StarterPick {
+    lock
+    playse(SE_PIN)
+    applymovement(LOCALID_TOWN_ELDER, Common_Movement_ExclamationMark)
+	waitmovement(0)
+    applymovement(LOCALID_TOWN_ELDER, Common_Movement_Delay48)
+	waitmovement(0)
+    applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement1)
+	waitmovement(0)
+    msgbox("Ah, {PLAYER}! \n I was expecting you. \p Come over here and choose yourself a POKéMON.")
+    applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement2)
+    applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement)
+    msgbox("Choose one of these!")
+    setvar(VAR_FERNET_RIVAL_HOUSE_STATE, 1)
+    setvar(VAR_FERNET_TOWN_ELDER, 1)
+    releaseall
+	end
+    
+}
+
+script FernetTown_RivalsHouse_TownElder {
     lock
     faceplayer
-    msgbox("Want a pokemon?", MSGBOX_YESNO)
-    if (var(VAR_RESULT)==NO){
-        msgbox("No worries.")
-    } 
-    else {
-        setflag (FLAG_SYS_POKEMON_GET)
-        givemon (SPECIES_MACHOP, 5, ITEM_ORAN_BERRY)
-        if (var(VAR_RESULT)==0){
-            call (FernetTown_RivalsHouse_Fanfare)
-            msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
-            if (var(VAR_RESULT)==YES){
-                call (Common_EventScript_GetGiftMonPartySlot)
-                call (Common_EventScript_NameReceivedPartyMon)
+    switch (var(VAR_FERNET_TOWN_ELDER)) {
+        case 0:
+            if (flag(FLAG_SYS_POKEMON_GET)) {
+                msgbox(format("Go out and explore the world! "))
+            } else{
+                msgbox(format("Please choose your prefered POKéMON."))
             }
-        } elif(var(VAR_RESULT) == 1){
-            call (FernetTown_RivalsHouse_Fanfare)
-            msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
-            if (var(VAR_RESULT)==YES){
-                call (Common_EventScript_NameReceivedPartyMon)
-            }
-            call (Common_EventScript_TransferredToPC)
-        } else{
-            goto (Common_EventScript_NoMoreRoomForPokemon)
-        }
+        case 1:
+            msgbox(format("I heard you beat my grandson in battle!"))
+        case 2:
+            msgbox(format("... \n... \l... \p I farted"))
+        default:
+            msgbox(format("It is time to explore the world!"))
     }
-    releaseall
+    release
     end
 }
 
-script FernetTown_RivalsHouse_Fanfare {
-    bufferspeciesname(1, SPECIES_MACHOP)
-    playfanfare (MUS_CAUGHT)
-    message ("{PLAYER} obtained Machop!")
+script FernetTown_RivalsHouse_Treecko {
+    lock
+    if (flag(FLAG_SYS_POKEMON_GET)){
+        msgbox(format("You already got one POKéMON. Don't be greedy!"))
+    } else {
+        msgbox("Take the POKéMON TREECKO?", MSGBOX_YESNO)
+        if (var(VAR_RESULT)==NO){
+        } else {
+            givemon(SPECIES_TREECKO, 5, ITEM_NONE)
+            if (var(VAR_RESULT)==0){
+                call (FernetTown_RivalsHouse_Fanfare_Treecko)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_GetGiftMonPartySlot)
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+            } elif(var(VAR_RESULT) == 1){
+                call (FernetTown_RivalsHouse_Fanfare_Treecko)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+                call (Common_EventScript_TransferredToPC)
+            } else{
+                goto (Common_EventScript_NoMoreRoomForPokemon)
+            }
+            goto (FernetTown_RivalsHouse_ChosenStarter)
+        }
+    }
+    release
+    end
+}
+
+script FernetTown_RivalsHouse_Torchic {
+    lock
+    if (flag(FLAG_SYS_POKEMON_GET)){
+        msgbox(format("You already got one POKéMON. Don't be greedy!"))
+    } else {
+        msgbox("Take the POKéMON TORCHIC?", MSGBOX_YESNO)
+        if (var(VAR_RESULT)==NO){
+        } else {
+            givemon(SPECIES_TORCHIC, 5, ITEM_NONE)
+            if (var(VAR_RESULT)==0){
+                call (FernetTown_RivalsHouse_Fanfare_Torchic)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_GetGiftMonPartySlot)
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+            } elif(var(VAR_RESULT) == 1){
+                call (FernetTown_RivalsHouse_Fanfare_Torchic)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+                call (Common_EventScript_TransferredToPC)
+            } else{
+                goto (Common_EventScript_NoMoreRoomForPokemon)
+            }
+            goto (FernetTown_RivalsHouse_ChosenStarter)
+        }
+    }
+    release
+    end
+}
+
+script FernetTown_RivalsHouse_Mudkip {
+    lock
+    if (flag(FLAG_SYS_POKEMON_GET)){
+        msgbox(format("You already got one POKéMON. Don't be greedy!"))
+    } else {
+    msgbox("Take the POKéMON MUDKIP?", MSGBOX_YESNO)
+        if (var(VAR_RESULT)==NO){
+        } else {
+            givemon(SPECIES_MUDKIP, 5, ITEM_NONE)
+            if (var(VAR_RESULT)==0){
+                call (FernetTown_RivalsHouse_Fanfare_Mudkip)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_GetGiftMonPartySlot)
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+            } elif(var(VAR_RESULT) == 1){
+                call (FernetTown_RivalsHouse_Fanfare_Mudkip)
+                msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
+                if (var(VAR_RESULT)==YES){
+                    call (Common_EventScript_NameReceivedPartyMon)
+                }
+                call (Common_EventScript_TransferredToPC)
+            } else{
+                goto (Common_EventScript_NoMoreRoomForPokemon)
+            }
+            goto (FernetTown_RivalsHouse_ChosenStarter)
+        }
+    }
+    release
+    end
+}
+
+script FernetTown_RivalsHouse_Fanfare_Treecko {
+    bufferspeciesname(1, SPECIES_TREECKO)
+    removeobject (2)
+    playfanfare (MUS_EVOLVED)
+    setflag(FLAG_SYS_POKEMON_GET)
+    message ("{PLAYER} obtained TREECKO!")
     waitmessage
     waitfanfare
-    bufferspeciesname(0, SPECIES_MACHOP)
+    bufferspeciesname(0, SPECIES_TREECKO)
     return
+}
+
+script FernetTown_RivalsHouse_Fanfare_Torchic {
+    bufferspeciesname(1, SPECIES_TORCHIC)
+    removeobject (3)
+    playfanfare (MUS_EVOLVED)
+    setflag(FLAG_SYS_POKEMON_GET)
+    message ("{PLAYER} obtained TORCHIC!")
+    waitmessage
+    waitfanfare
+    bufferspeciesname(0, SPECIES_TORCHIC)
+    return
+}
+
+script FernetTown_RivalsHouse_Fanfare_Mudkip {
+    bufferspeciesname(1, SPECIES_MUDKIP)
+    removeobject (4)
+    playfanfare (MUS_EVOLVED)
+    setflag(FLAG_SYS_POKEMON_GET)
+    message ("{PLAYER} obtained MUDKIP!")
+    waitmessage
+    waitfanfare
+    bufferspeciesname(0, SPECIES_MUDKIP)
+    return
+}
+
+script FernetTown_RivalsHouse_ChosenStarter {
+    setvar(VAR_FERNET_RIVAL_HOUSE_STATE, 2)
+    setflag(FLAG_HIDE_FERNET_TOWN_TREECKO)
+    setflag(FLAG_HIDE_FERNET_TOWN_TORCHIC)
+    setflag(FLAG_HIDE_FERNET_TOWN_MUDKIP)
+    end
+}
+
+script FernetTown_RivalsHouse_PreventExitSouth {
+	lockall
+	msgbox(format("Choose a POKéMON before you leave."))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Movement_PreventExitSouth)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+script FernetTown_RivalsHouse_PreventExitEast {
+	lockall
+	msgbox(format("Choose a POKéMON before you leave."))
+	closemessage
+	applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Movement_PreventExitEast)
+	waitmovement(0)
+	releaseall
+	end
+}
+
+movement FernetTown_RivalsHouse_Movement_PreventExitEast {
+    walk_left
+}
+
+movement FernetTown_RivalsHouse_Movement_PreventExitSouth {
+    walk_up
+}
+
+movement FernetTown_RivalsHouse_TownElder_Movement1{
+    walk_right
+    walk_down
+    walk_down
+}
+
+movement FernetTown_RivalsHouse_TownElder_Movement2{
+    walk_up
+    walk_up
+    walk_left
+}
+
+movement FernetTown_RivalsHouse_Player_Movement{
+    walk_up
+    walk_up
+    walk_left
+    face_up
 }

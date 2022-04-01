@@ -12,17 +12,10 @@ FernetTown_Sign::
 FernetTown_Girl::
 	lock
 	faceplayer
-	checkplayergender
-	compare VAR_RESULT, MALE
-	goto_if_eq FernetTown_Girl_2
-	msgbox FernetTown_Girl_Text_1
-FernetTown_Girl_1:
-	releaseall
-	end
-
-FernetTown_Girl_2:
+	setvar VAR_FERNET_TOWN_ELDER, 0
 	msgbox FernetTown_Girl_Text_0
-	goto FernetTown_Girl_1
+	release
+	end
 
 
 FernetTown_Marcus::
@@ -35,10 +28,7 @@ FernetTown_Sign_Text_0:
 	.string "Fernet Town$"
 
 FernetTown_Girl_Text_0:
-	.string "Hey guy$"
-
-FernetTown_Girl_Text_1:
-	.string "Hey girl$"
+	.string "The var has been set to 0.$"
 
 FernetTown_Marcus_Text_0:
 	.string "Fight me!$"

@@ -3550,7 +3550,7 @@ Route123_Text_AlbertoDefeat:
 
 Route123_Text_AlbertoPostBattle:
 	.string "The probability that i someday will\n"
-	.string "gets higher the more I battle.$"
+	.string "win, gets higher the more I battle.$"
 
 Route123_Text_EdIntro:
 	.string "I got lost in these woods. \n"

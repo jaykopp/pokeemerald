@@ -11,13 +11,9 @@ script FernetTown_Sign {
 script FernetTown_Girl {
     lock
     faceplayer
-    checkplayergender
-    if (var(VAR_RESULT) == MALE) {
-        msgbox("Hey guy")
-    } else {
-        msgbox(format("Hey girl"))
-    }
-    releaseall
+    setvar(VAR_FERNET_TOWN_ELDER, 0)
+    msgbox(format("The var has been set to 0."))
+    release
     end
 }
 

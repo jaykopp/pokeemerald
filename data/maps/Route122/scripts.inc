@@ -26,6 +26,30 @@ Route122_OldRodFisherman_5:
 	goto Route122_OldRodFisherman_1
 
 
+Route122_Worker1::
+	lock
+	faceplayer
+	msgbox Route122_Worker1_Text_0
+	release
+	end
+
+
+Route122_Worker2::
+	lock
+	faceplayer
+	msgbox Route122_Worker2_Text_0
+	release
+	end
+
+
+Route122_Worker3::
+	lock
+	faceplayer
+	msgbox Route122_Worker3_Text_0
+	release
+	end
+
+
 Route122_OldRodFisherman_Text_0:
 	.string "The sea is wonderful, don't you think?$"
 
@@ -43,3 +67,15 @@ Route122_OldRodFisherman_Text_3:
 
 Route122_OldRodFisherman_Text_4:
 	.string "What a joyless existence...$"
+
+Route122_Worker1_Text_0:
+	.string "The boss is strict, but fair!$"
+
+Route122_Worker2_Text_0:
+	.string "The construction of the road to\n"
+	.string "LILYCOVE is almost finished.$"
+
+Route122_Worker3_Text_0:
+	.string "I am sorry, due to security reasons no\n"
+	.string "one is allowed on the PYRE PROMENADE\l"
+	.string "yet.$"

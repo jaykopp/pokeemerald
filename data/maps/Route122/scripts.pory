@@ -21,3 +21,27 @@ script Route122_OldRodFisherman {
     end
 }
 
+
+script Route122_Worker1 {
+    lock
+    faceplayer
+    msgbox(format("The boss is strict, but fair!"))
+    release
+    end
+}
+
+script Route122_Worker2 {
+    lock
+    faceplayer
+    msgbox(format("The construction of the road to LILYCOVE is almost finished."))
+    release
+    end
+}
+
+script Route122_Worker3 {
+    lock
+    faceplayer
+    msgbox(format("I am sorry, due to security reasons no one is allowed on the PYRE PROMENADE yet."))
+    release
+    end
+}
