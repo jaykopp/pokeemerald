@@ -230,8 +230,8 @@ Route123_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-Route123_EventScript_ItemElixir::
-	finditem ITEM_ELIXIR
+Route123_EventScript_ItemEther::
+	finditem ITEM_ETHER
 	end
 
 Route123_EventScript_ItemPPUp::

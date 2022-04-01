@@ -124,13 +124,22 @@ static const struct TrainerMon sParty_Marcel[] = {
 static const struct TrainerMon sParty_Alberto[] = {
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_PELIPPER,
+    .lvl = 7,
+    .species = SPECIES_TOGEPI,
+    .moves = {MOVE_METRONOME, MOVE_REFLECT, MOVE_NONE, MOVE_NONE}
     },
     {
     .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_XATU,
+    .lvl = 7,
+    .species = SPECIES_CLEFFA,
+    .moves = {MOVE_METRONOME, MOVE_LIGHT_SCREEN, MOVE_NONE, MOVE_NONE}
+    },
+    {
+    .iv = 0,
+    .lvl = 8,
+    .species = SPECIES_SNUBBULL,
+    .moves = {MOVE_METRONOME, MOVE_CHARM, MOVE_NONE, MOVE_NONE},
+    .ability = ABILITY_SLOT_1
     }
 };
 
@@ -2959,24 +2968,32 @@ static const struct TrainerMon sParty_Cameron1[] = {
 static const struct TrainerMon sParty_Jimmy[] = {
     {
     .iv = 255,
-    .lvl = 10,
-    .species = SPECIES_MANKEY,
-    .heldItem = ITEM_LIECHI_BERRY,
-    .moves = {MOVE_REVERSAL, MOVE_ENDURE, MOVE_BRICK_BREAK, MOVE_ROCK_TOMB}
-    },
-    {
-    .iv = 255,
-    .lvl = 10,
+    .lvl = 9,
     .species = SPECIES_DUSKULL,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = {MOVE_WILL_O_WISP, MOVE_PAIN_SPLIT, MOVE_SHADOW_BALL, MOVE_THIEF}
     },
     {
     .iv = 255,
-    .lvl = 10,
+    .lvl = 9,
+    .species = SPECIES_LILEEP,
+    .heldItem = ITEM_LUM_BERRY,
+    .moves = {MOVE_SLUDGE_BOMB, MOVE_GIGA_DRAIN, MOVE_RECOVER, MOVE_ANCIENT_POWER}
+    },
+    {
+    .iv = 255,
+    .lvl = 9,
     .species = SPECIES_MANKEY,
     .heldItem = ITEM_LIECHI_BERRY,
     .moves = {MOVE_REVERSAL, MOVE_ENDURE, MOVE_BRICK_BREAK, MOVE_ROCK_TOMB}
+    },
+    {
+    .iv = 255,
+    .lvl = 10,
+    .species = SPECIES_DODUO,
+    .heldItem = ITEM_LIECHI_BERRY,
+    .ability = ABILITY_SLOT_2,
+    .moves = {MOVE_DRILL_PECK, MOVE_TRI_ATTACK, MOVE_ENDURE, MOVE_FLAIL}
     }
 };
 
@@ -6604,9 +6621,9 @@ static const struct TrainerMon sParty_Jazmyn[] = {
 static const struct TrainerMon sParty_Jonas[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_KOFFING,
-    .moves = {MOVE_TOXIC, MOVE_THUNDER, MOVE_SELF_DESTRUCT, MOVE_SLUDGE_BOMB}
+    .lvl = 5,
+    .species = SPECIES_PINECO,
+    .moves = {MOVE_TACKLE, MOVE_PROTECT, MOVE_TOXIC}
     }
 };
 

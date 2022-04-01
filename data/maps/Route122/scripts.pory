@@ -1,0 +1,23 @@
+mapscripts Route122_MapScripts {
+}
+
+script Route122_OldRodFisherman {
+    lock
+    faceplayer
+    if (flag(FLAG_RECEIVED_OLD_ROD)){
+        msgbox(format("The sea is wonderful, don't you think?"))
+    } else {
+        msgbox(format("The sea brings so many a joy. Like fishing! Would you like to experience the joy of fishing?"), MSGBOX_YESNO)
+        if (var(VAR_RESULT)==YES){
+            msgbox(format("Then take this!"))
+            giveitem(ITEM_OLD_ROD)
+	        setflag(FLAG_RECEIVED_OLD_ROD)
+            msgbox(format("It's not top notch, but it will do the trick."))
+        } else {
+            msgbox(format("What a joyless existence..."))
+        }
+    }
+    release
+    end
+}
+
