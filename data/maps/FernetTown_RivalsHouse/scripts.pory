@@ -15,9 +15,11 @@ script FernetTown_RivalsHouse_StarterPick {
 	waitmovement(0)
     applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement1)
 	waitmovement(0)
-    msgbox("Ah, {PLAYER}! \n I was expecting you. \p Come over here and choose yourself a POKéMON.")
+    msgbox("Ah, {PLAYER}! \nI was expecting you. \pCome over here and choose \nyourself a POKéMON.")
     applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement2)
     applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement)
+    waitmovement(0)
+    faceplayer
     msgbox("Choose one of these!")
     setvar(VAR_FERNET_RIVAL_HOUSE_STATE, 1)
     setvar(VAR_FERNET_TOWN_ELDER, 1)
@@ -63,6 +65,7 @@ script FernetTown_RivalsHouse_Treecko {
                     call (Common_EventScript_GetGiftMonPartySlot)
                     call (Common_EventScript_NameReceivedPartyMon)
                 }
+                closemessage
             } elif(var(VAR_RESULT) == 1){
                 call (FernetTown_RivalsHouse_Fanfare_Treecko)
                 msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
@@ -96,6 +99,7 @@ script FernetTown_RivalsHouse_Torchic {
                     call (Common_EventScript_GetGiftMonPartySlot)
                     call (Common_EventScript_NameReceivedPartyMon)
                 }
+                closemessage
             } elif(var(VAR_RESULT) == 1){
                 call (FernetTown_RivalsHouse_Fanfare_Torchic)
                 msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)
@@ -129,6 +133,7 @@ script FernetTown_RivalsHouse_Mudkip {
                     call (Common_EventScript_GetGiftMonPartySlot)
                     call (Common_EventScript_NameReceivedPartyMon)
                 }
+                closemessage
             } elif(var(VAR_RESULT) == 1){
                 call (FernetTown_RivalsHouse_Fanfare_Mudkip)
                 msgbox (gText_NicknameThisPokemon, MSGBOX_YESNO)

@@ -1081,3 +1081,5 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/BerryVillage_PokemonCenter/scripts.inc"
 
 	.include "data/maps/BerryVillage_Mart/scripts.inc"
+
+	.include "data/maps/FernetWoods/scripts.inc"

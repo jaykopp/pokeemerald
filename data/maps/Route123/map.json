@@ -400,32 +400,6 @@
       "flag": "FLAG_ITEM_ROUTE_123_ULTRA_BALL"
     },
     {
-      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 119,
-      "y": 9,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route123_EventScript_ItemEther",
-      "flag": "FLAG_ITEM_ROUTE_123_ETHER"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 122,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "2",
-      "script": "Route123_EventScript_Jonas",
-      "flag": "0"
-    },
-    {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_2",
       "x": 59,
       "y": 3,
@@ -436,19 +410,6 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Route123_EventScript_Kayley",
-      "flag": "0"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER",
-      "x": 115,
-      "y": 18,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
-      "movement_range_x": 0,
-      "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "Route123_EventScript_Ed",
       "flag": "0"
     },
     {
@@ -521,7 +482,7 @@
       "x": 77,
       "y": 13,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WALK_DOWN_AND_UP",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -544,7 +505,20 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 103,
+      "y": 14,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_WOODS",
+      "dest_warp_id": 2
+    },
+    {
+      "x": 103,
+      "y": 15,
+      "elevation": 0,
+      "dest_map": "MAP_FERNET_WOODS",
+      "dest_warp_id": 3
+    }
   ],
   "coord_events": [
     {
@@ -763,14 +737,6 @@
       "elevation": 3,
       "item": "ITEM_HYPER_POTION",
       "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_HYPER_POTION"
-    },
-    {
-      "type": "hidden_item",
-      "x": 124,
-      "y": 18,
-      "elevation": 3,
-      "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_POTION"
     },
     {
       "type": "hidden_item",

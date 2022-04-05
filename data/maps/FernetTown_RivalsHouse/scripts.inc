@@ -3,7 +3,7 @@ FernetTown_RivalsHouse_MapScripts::
 	.byte 0
 
 FernetTown_RivalsHouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
-	map_script_2 VAR_FERNET_TOWN_ELDER, 0, FernetTown_RivalsHouse_StarterPick
+	map_script_2 VAR_FERNET_RIVAL_HOUSE_STATE, 0, FernetTown_RivalsHouse_StarterPick
 	.2byte 0
 
 
@@ -19,6 +19,8 @@ FernetTown_RivalsHouse_StarterPick::
 	msgbox FernetTown_RivalsHouse_StarterPick_Text_0
 	applymovement 1, FernetTown_RivalsHouse_TownElder_Movement2
 	applymovement OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement
+	waitmovement 0
+	faceplayer
 	msgbox FernetTown_RivalsHouse_StarterPick_Text_1
 	setvar VAR_FERNET_RIVAL_HOUSE_STATE, 1
 	setvar VAR_FERNET_TOWN_ELDER, 1
@@ -85,26 +87,28 @@ FernetTown_RivalsHouse_Treecko_9:
 	call FernetTown_RivalsHouse_Fanfare_Treecko
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Treecko_14
+	goto_if_eq FernetTown_RivalsHouse_Treecko_15
+FernetTown_RivalsHouse_Treecko_14:
+	closemessage
 	goto FernetTown_RivalsHouse_Treecko_8
 
 FernetTown_RivalsHouse_Treecko_10:
 	call FernetTown_RivalsHouse_Fanfare_Treecko
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Treecko_17
-FernetTown_RivalsHouse_Treecko_16:
+	goto_if_eq FernetTown_RivalsHouse_Treecko_18
+FernetTown_RivalsHouse_Treecko_17:
 	call Common_EventScript_TransferredToPC
 	goto FernetTown_RivalsHouse_Treecko_8
 
-FernetTown_RivalsHouse_Treecko_14:
+FernetTown_RivalsHouse_Treecko_15:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Treecko_8
+	goto FernetTown_RivalsHouse_Treecko_14
 
-FernetTown_RivalsHouse_Treecko_17:
+FernetTown_RivalsHouse_Treecko_18:
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Treecko_16
+	goto FernetTown_RivalsHouse_Treecko_17
 
 
 FernetTown_RivalsHouse_Torchic::
@@ -136,26 +140,28 @@ FernetTown_RivalsHouse_Torchic_9:
 	call FernetTown_RivalsHouse_Fanfare_Torchic
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Torchic_14
+	goto_if_eq FernetTown_RivalsHouse_Torchic_15
+FernetTown_RivalsHouse_Torchic_14:
+	closemessage
 	goto FernetTown_RivalsHouse_Torchic_8
 
 FernetTown_RivalsHouse_Torchic_10:
 	call FernetTown_RivalsHouse_Fanfare_Torchic
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Torchic_17
-FernetTown_RivalsHouse_Torchic_16:
+	goto_if_eq FernetTown_RivalsHouse_Torchic_18
+FernetTown_RivalsHouse_Torchic_17:
 	call Common_EventScript_TransferredToPC
 	goto FernetTown_RivalsHouse_Torchic_8
 
-FernetTown_RivalsHouse_Torchic_14:
+FernetTown_RivalsHouse_Torchic_15:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Torchic_8
+	goto FernetTown_RivalsHouse_Torchic_14
 
-FernetTown_RivalsHouse_Torchic_17:
+FernetTown_RivalsHouse_Torchic_18:
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Torchic_16
+	goto FernetTown_RivalsHouse_Torchic_17
 
 
 FernetTown_RivalsHouse_Mudkip::
@@ -187,26 +193,28 @@ FernetTown_RivalsHouse_Mudkip_9:
 	call FernetTown_RivalsHouse_Fanfare_Mudkip
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Mudkip_14
+	goto_if_eq FernetTown_RivalsHouse_Mudkip_15
+FernetTown_RivalsHouse_Mudkip_14:
+	closemessage
 	goto FernetTown_RivalsHouse_Mudkip_8
 
 FernetTown_RivalsHouse_Mudkip_10:
 	call FernetTown_RivalsHouse_Fanfare_Mudkip
 	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq FernetTown_RivalsHouse_Mudkip_17
-FernetTown_RivalsHouse_Mudkip_16:
+	goto_if_eq FernetTown_RivalsHouse_Mudkip_18
+FernetTown_RivalsHouse_Mudkip_17:
 	call Common_EventScript_TransferredToPC
 	goto FernetTown_RivalsHouse_Mudkip_8
 
-FernetTown_RivalsHouse_Mudkip_14:
+FernetTown_RivalsHouse_Mudkip_15:
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Mudkip_8
+	goto FernetTown_RivalsHouse_Mudkip_14
 
-FernetTown_RivalsHouse_Mudkip_17:
+FernetTown_RivalsHouse_Mudkip_18:
 	call Common_EventScript_NameReceivedPartyMon
-	goto FernetTown_RivalsHouse_Mudkip_16
+	goto FernetTown_RivalsHouse_Mudkip_17
 
 
 FernetTown_RivalsHouse_Fanfare_Treecko::
@@ -246,7 +254,10 @@ FernetTown_RivalsHouse_Fanfare_Mudkip::
 
 
 FernetTown_RivalsHouse_ChosenStarter::
-	setvar VAR_FERNET_RIVAL_HOUSE_STATE, 0
+	setvar VAR_FERNET_RIVAL_HOUSE_STATE, 2
+	setflag FLAG_HIDE_FERNET_TOWN_TREECKO
+	setflag FLAG_HIDE_FERNET_TOWN_TORCHIC
+	setflag FLAG_HIDE_FERNET_TOWN_MUDKIP
 	end
 
 
@@ -298,7 +309,7 @@ FernetTown_RivalsHouse_Player_Movement:
 	step_end
 
 FernetTown_RivalsHouse_StarterPick_Text_0:
-	.string "Ah, {PLAYER}! \n I was expecting you. \p Come over here and choose yourself a POKéMON.$"
+	.string "Ah, {PLAYER}! \nI was expecting you. \pCome over here and choose \nyourself a POKéMON.$"
 
 FernetTown_RivalsHouse_StarterPick_Text_1:
 	.string "Choose one of these!$"

@@ -1,0 +1,15 @@
+mapscripts FernetWoods_MapScripts {
+}
+
+script FernetWoods_EventScript_Ed {
+    trainerbattle_single(TRAINER_ED, "I got lost in these woods. \n Fortunately I caught a new POKéMON!", "Seems my new POKéMON couldn't win...")
+    msgbox(format("I think I'm growing a liking to these woods."), MSGBOX_AUTOCLOSE)
+    end
+}
+
+script FernetWoods_EventScript_Jonas {
+    trainerbattle_single(TRAINER_JONAS, "I lay in ambush, and a TRAINER has\nlanded in my trap!", "If you don't lose, how am I supposed\nto have fun playing ninja?")
+    msgbox(format("I'm going to ambush a weaker-looking\nTRAINER next time."), MSGBOX_AUTOCLOSE)
+    end
+}
+

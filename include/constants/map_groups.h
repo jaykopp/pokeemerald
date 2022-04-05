@@ -67,6 +67,7 @@
 #define MAP_FERNET_TOWN         (58 | (0 << 8))
 #define MAP_BERRY_VILLAGE       (59 | (0 << 8))
 #define MAP_PYRE_PROMENADE      (60 | (0 << 8))
+#define MAP_FERNET_WOODS        (61 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

@@ -4424,7 +4424,7 @@
     {
       "id": "LAYOUT_FERNET_TOWN",
       "name": "FernetTown_Layout",
-      "width": 30,
+      "width": 34,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
@@ -4540,6 +4540,16 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/BerryVillage_Mart/border.bin",
       "blockdata_filepath": "data/layouts/BerryVillage_Mart/map.bin"
+    },
+    {
+      "id": "LAYOUT_FERNET_WOODS",
+      "name": "FernetWoods_Layout",
+      "width": 46,
+      "height": 28,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Fortree",
+      "border_filepath": "data/layouts/FernetWoods/border.bin",
+      "blockdata_filepath": "data/layouts/FernetWoods/map.bin"
     }
   ]
 }

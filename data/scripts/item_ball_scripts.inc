@@ -230,7 +230,7 @@ Route123_EventScript_ItemUltraBall::
 	finditem ITEM_ULTRA_BALL
 	end
 
-Route123_EventScript_ItemEther::
+FernetWoods_EventScript_ItemEther::
 	finditem ITEM_ETHER
 	end
 
