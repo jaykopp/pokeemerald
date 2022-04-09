@@ -202,6 +202,7 @@ static const u8 sMapName_QuietWoods[] = _("QUIET WOODS");
 static const u8 sMapName_FernetTown[] = _("FERNET TOWN");
 static const u8 sMapName_BerryVillage[] = _("BERRY VILLAGE");
 static const u8 sMapName_PyrePromenade[] = _("PYRE PROMENADE");
+static const u8 sMapName_FernetWoods[] = _("FERNET WOODS");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]             = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -235,7 +236,8 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_EVER_GRANDE_CITY]           = {27, 8, 1, 2, sMapName_EverGrandeCity},
     [MAPSEC_FALLARBOR_TOWN]             = {3, 0, 1, 1, sMapName_FallarborTown},
     [MAPSEC_FARAWAY_ISLAND]             = {0, 0, 1, 1, sMapName_FarawayIsland},
-    [MAPSEC_FERNET_TOWN]                = {16, 6, 1, 1, sMapName_FernetTown},
+    [MAPSEC_FERNET_TOWN]                = {17, 6, 1, 1, sMapName_FernetTown},
+    [MAPSEC_FERNET_WOODS]               = {16, 6, 1, 1, sMapName_FernetWoods},
     [MAPSEC_FIERY_PATH]                 = {6, 3, 1, 1, sMapName_FieryPath},
     [MAPSEC_FIERY_PATH2]                = {7, 3, 1, 1, sMapName_FieryPath},
     [MAPSEC_FIVE_ISLAND]                = {0, 0, 1, 1, sMapName_FiveIsland},

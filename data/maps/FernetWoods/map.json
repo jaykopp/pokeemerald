@@ -3,7 +3,7 @@
   "name": "FernetWoods",
   "layout": "LAYOUT_FERNET_WOODS",
   "music": "MUS_ABANDONED_SHIP",
-  "region_map_section": "MAPSEC_PYRE_PROMENADE",
+  "region_map_section": "MAPSEC_FERNET_WOODS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_ROUTE",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "FernetWoods_EventScript_ItemEther",
-      "flag": "FLAG_ITEM_ROUTE_123_ETHER"
+      "flag": "FLAG_ITEM_FERNET_WOODS_ETHER"
     }
   ],
   "warp_events": [
@@ -94,7 +94,7 @@
       "y": 19,
       "elevation": 3,
       "item": "ITEM_POTION",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_123_POTION"
+      "flag": "FLAG_HIDDEN_ITEM_FERNET_WOODS_POTION"
     }
   ]
 }
