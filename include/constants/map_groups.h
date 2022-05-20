@@ -68,6 +68,8 @@
 #define MAP_BERRY_VILLAGE       (59 | (0 << 8))
 #define MAP_PYRE_PROMENADE      (60 | (0 << 8))
 #define MAP_FERNET_WOODS        (61 | (0 << 8))
+#define MAP_ROUTE135            (62 | (0 << 8))
+#define MAP_BORROW_CAVE         (63 | (0 << 8))
 
 // gMapGroup_IndoorLittleroot
 #define MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    (0 | (1 << 8))

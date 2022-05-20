@@ -203,6 +203,7 @@ static const u8 sMapName_FernetTown[] = _("FERNET TOWN");
 static const u8 sMapName_BerryVillage[] = _("BERRY VILLAGE");
 static const u8 sMapName_PyrePromenade[] = _("PYRE PROMENADE");
 static const u8 sMapName_FernetWoods[] = _("FERNET WOODS");
+static const u8 sMapName_Route135[] = _("ROUTE 135");
 
 const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ABANDONED_SHIP]             = {6, 14, 1, 1, sMapName_AbandonedShip},
@@ -339,6 +340,7 @@ const struct RegionMapLocation gRegionMapEntries[] = {
     [MAPSEC_ROUTE_132]                  = {15, 10, 2, 1, sMapName_Route132},
     [MAPSEC_ROUTE_133]                  = {12, 10, 3, 1, sMapName_Route133},
     [MAPSEC_ROUTE_134]                  = {9, 10, 3, 1, sMapName_Route134},
+    [MAPSEC_ROUTE_135]                  = {10, 1, 1, 1, sMapName_Route135},
     [MAPSEC_ROUTE_14]                   = {0, 0, 1, 1, sMapName_Route14},
     [MAPSEC_ROUTE_15]                   = {0, 0, 1, 1, sMapName_Route15},
     [MAPSEC_ROUTE_16]                   = {0, 0, 1, 1, sMapName_Route16},

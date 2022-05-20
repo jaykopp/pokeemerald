@@ -309,13 +309,18 @@ static const struct TrainerMon sParty_GruntAquaHideout6[] = {
 static const struct TrainerMon sParty_Fredrick[] = {
     {
     .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MAKUHITA,
+    .lvl = 6,
+    .species = SPECIES_POOCHYENA,
     },
     {
     .iv = 100,
-    .lvl = 30,
-    .species = SPECIES_MACHOKE,
+    .lvl = 6,
+    .species = SPECIES_SENTRET,
+    },
+    {
+    .iv = 100,
+    .lvl = 6,
+    .species = SPECIES_NIDORAN_M,
     }
 };
 
@@ -441,13 +446,13 @@ static const struct TrainerMon sParty_Felix[] = {
 static const struct TrainerMon sParty_Violet[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_ROSELIA,
+    .lvl = 6,
+    .species = SPECIES_ODDISH,
     },
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_GLOOM,
+    .lvl = 6,
+    .species = SPECIES_SHROOMISH,
     }
 };
 

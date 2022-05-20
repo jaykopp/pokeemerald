@@ -100,7 +100,9 @@
     "FernetTown",
     "BerryVillage",
     "PyrePromenade",
-    "FernetWoods"
+    "FernetWoods",
+    "Route135",
+    "BorrowCave"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

@@ -379,9 +379,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_FREDRICK] =
     {
-        .trainerClass = TRAINER_CLASS_EXPERT,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
-        .trainerPic = TRAINER_PIC_EXPERT_M,
+        .trainerClass = TRAINER_CLASS_SCHOOL_KID,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_SCHOOL_KID_M,
         .trainerName = _("FREDRICK"),
         .items = {},
         .doubleBattle = FALSE,
@@ -515,7 +515,7 @@ const struct Trainer gTrainers[] = {
         .trainerName = _("VIOLET"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Violet),
         .party = {.TrainerMon = sParty_Violet},
     },

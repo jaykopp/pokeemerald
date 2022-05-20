@@ -7,25 +7,31 @@ mapscripts FernetTown_RivalsHouse_MapScripts {
 }
 
 script FernetTown_RivalsHouse_StarterPick {
-    lock
-    playse(SE_PIN)
-    applymovement(LOCALID_TOWN_ELDER, Common_Movement_ExclamationMark)
-	waitmovement(0)
-    applymovement(LOCALID_TOWN_ELDER, Common_Movement_Delay48)
-	waitmovement(0)
-    applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement1)
-	waitmovement(0)
-    msgbox("Ah, {PLAYER}! \nI was expecting you. \pCome over here and choose \nyourself a POKéMON.")
-    applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement2)
-    applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement)
-    waitmovement(0)
-    faceplayer
-    msgbox("Choose one of these!")
-    setvar(VAR_FERNET_RIVAL_HOUSE_STATE, 1)
-    setvar(VAR_FERNET_TOWN_ELDER, 1)
-    releaseall
-	end
-    
+    if (flag(FLAG_SYS_POKEMON_GET)){
+        lock
+        releaseall
+        end
+    }
+    else {
+        lock
+        playse(SE_PIN)
+        applymovement(LOCALID_TOWN_ELDER, Common_Movement_ExclamationMark)
+        waitmovement(0)
+        applymovement(LOCALID_TOWN_ELDER, Common_Movement_Delay48)
+        waitmovement(0)
+        applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement1)
+        waitmovement(0)
+        msgbox("Ah, {PLAYER}! \nI was expecting you. \pCome over here and choose \nyourself a POKéMON.")
+        applymovement(LOCALID_TOWN_ELDER, FernetTown_RivalsHouse_TownElder_Movement2)
+        applymovement(OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement)
+        waitmovement(0)
+        faceplayer
+        msgbox("Choose one of these!")
+        setvar(VAR_FERNET_RIVAL_HOUSE_STATE, 1)
+        setvar(VAR_FERNET_TOWN_ELDER, 1)
+        releaseall
+        end
+    }
 }
 
 script FernetTown_RivalsHouse_TownElder {

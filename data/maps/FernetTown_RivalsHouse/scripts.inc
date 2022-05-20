@@ -8,6 +8,7 @@ FernetTown_RivalsHouse_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 
 
 FernetTown_RivalsHouse_StarterPick::
+	goto_if_set FLAG_SYS_POKEMON_GET, FernetTown_RivalsHouse_StarterPick_1
 	lock
 	playse SE_PIN
 	applymovement 1, Common_Movement_ExclamationMark
@@ -24,6 +25,11 @@ FernetTown_RivalsHouse_StarterPick::
 	msgbox FernetTown_RivalsHouse_StarterPick_Text_1
 	setvar VAR_FERNET_RIVAL_HOUSE_STATE, 1
 	setvar VAR_FERNET_TOWN_ELDER, 1
+	releaseall
+	end
+
+FernetTown_RivalsHouse_StarterPick_1:
+	lock
 	releaseall
 	end
 
