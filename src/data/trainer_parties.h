@@ -874,33 +874,27 @@ static const struct TrainerMon sParty_Berke[] = {
 static const struct TrainerMon sParty_Braxton[] = {
     {
     .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SWELLOW,
+    .lvl = 5,
+    .species = SPECIES_TAILLOW,
     .moves = {MOVE_FOCUS_ENERGY, MOVE_QUICK_ATTACK, MOVE_WING_ATTACK, MOVE_ENDEAVOR}
     },
     {
     .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_TRAPINCH,
+    .lvl = 5,
+    .species = SPECIES_SANDSHREW,
     .moves = {MOVE_BITE, MOVE_DIG, MOVE_FAINT_ATTACK, MOVE_SAND_TOMB}
     },
     {
     .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_WAILMER,
+    .lvl = 5,
+    .species = SPECIES_LUVDISC,
     .moves = {MOVE_ROLLOUT, MOVE_WHIRLPOOL, MOVE_ASTONISH, MOVE_WATER_PULSE}
     },
     {
     .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_MAGNETON,
+    .lvl = 5,
+    .species = SPECIES_PICHU,
     .moves = {MOVE_THUNDERBOLT, MOVE_SUPERSONIC, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM}
-    },
-    {
-    .iv = 100,
-    .lvl = 28,
-    .species = SPECIES_SHIFTRY,
-    .moves = {MOVE_GIGA_DRAIN, MOVE_FAINT_ATTACK, MOVE_DOUBLE_TEAM, MOVE_SWAGGER}
     }
 };
 
@@ -1363,12 +1357,12 @@ static const struct TrainerMon sParty_Patricia[] = {
 static const struct TrainerMon sParty_Kindra[] = {
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 6,
     .species = SPECIES_DUSKULL,
     },
     {
     .iv = 0,
-    .lvl = 30,
+    .lvl = 6,
     .species = SPECIES_SHUPPET,
     }
 };
@@ -3119,12 +3113,12 @@ static const struct TrainerMon sParty_Jacki1[] = {
     {
     .iv = 0,
     .lvl = 30,
-    .species = SPECIES_KADABRA,
+    .species = SPECIES_SMOOCHUM,
     },
     {
     .iv = 0,
     .lvl = 30,
-    .species = SPECIES_LUNATONE,
+    .species = SPECIES_EXEGGCUTE,
     }
 };
 
@@ -6625,16 +6619,20 @@ static const struct TrainerMon sParty_Jonas[] = {
     .iv = 0,
     .lvl = 5,
     .species = SPECIES_PINECO,
-    .moves = {MOVE_TACKLE, MOVE_PROTECT, MOVE_TOXIC}
+    .moves = {MOVE_TACKLE, MOVE_PROTECT, MOVE_TOXIC, MOVE_NONE}
     }
 };
 
 static const struct TrainerMon sParty_Kayley[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_CASTFORM,
-    .moves = {MOVE_SUNNY_DAY, MOVE_WEATHER_BALL, MOVE_FLAMETHROWER, MOVE_SOLAR_BEAM}
+    .lvl = 6,
+    .species = SPECIES_BELLSPROUT,
+    },
+    {
+    .iv = 0,
+    .lvl = 6,
+    .species = SPECIES_SHROOMISH,
     }
 };
 
