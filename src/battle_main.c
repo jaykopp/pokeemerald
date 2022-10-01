@@ -4088,6 +4088,7 @@ u8 IsRunningFromBattleImpossible(void)
         gBattleCommunication[MULTISTRING_CHOOSER] = B_MSG_DONT_LEAVE_BIRCH;
         return 1;
     }
+    // Legg inn håndtering av DONT_LEAVE_BIRCH her
     return 0;
 }
 

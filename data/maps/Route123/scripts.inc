@@ -196,3 +196,91 @@ Route123_Text_RouteSignMtPyre:
 Route123_Text_BerryMastersHouse:
 	.string "BERRY MASTER'S HOUSE$"
 
+Route123_EventScript_BirchsTrigger1::
+	setvar VAR_TEMP_1, 0
+	goto Route123_EventScript_BirchsRescue
+	end
+
+
+Route123_EventScript_BirchsTrigger2::
+	setvar VAR_TEMP_1, 1
+	goto Route123_EventScript_BirchsRescue
+	end
+
+
+Route123_EventScript_BirchsTrigger3::
+	setvar VAR_TEMP_1, 2
+	goto Route123_EventScript_BirchsRescue
+	end
+
+
+Route123_EventScript_BirchsRescue::
+	lockall
+	playbgm MUS_HELP, TRUE
+	msgbox Route123_EventScript_BirchsRescue_Text_0, MSGBOX_AUTOCLOSE
+	switch VAR_TEMP_1
+	case 0, Route123_EventScript_BirchsRescue_3
+	case 2, Route123_EventScript_BirchsRescue_4
+Route123_EventScript_BirchsRescue_1:
+	applymovement 22, BirchChase
+	applymovement 23, BirchChase
+	waitmovement 0
+	msgbox Route123_EventScript_BirchsRescue_Text_1, MSGBOX_AUTOCLOSE
+	fadescreen FADE_TO_BLACK
+	removeobject 23
+	setwildbattle SPECIES_ZIGZAGOON, 7, ITEM_ORAN_BERRY
+	dowildbattle
+	setflag FLAG_ROUTE_123_BIRCH_RESCUE
+	setflag FLAG_ROUTE_123_ZIGZAGOON
+	msgbox Route123_EventScript_BirchsRescue_Text_2, MSGBOX_AUTOCLOSE
+	playfanfare MUS_OBTAIN_ITEM
+	msgbox Route123_EventScript_BirchsRescue_Text_3
+	waitfanfare
+	setflag FLAG_SYS_POKEDEX_GET
+	msgbox Route123_EventScript_BirchsRescue_Text_4, MSGBOX_DEFAULT
+	releaseall
+	end
+
+Route123_EventScript_BirchsRescue_3:
+	applymovement 22, BirchTrigger1
+	applymovement 23, BirchTrigger1
+	goto Route123_EventScript_BirchsRescue_1
+
+Route123_EventScript_BirchsRescue_4:
+	applymovement 22, BirchTrigger3
+	applymovement 23, BirchTrigger3
+	goto Route123_EventScript_BirchsRescue_1
+
+
+BirchChase:
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+BirchTrigger1:
+	walk_down
+	step_end
+
+BirchTrigger3:
+	walk_up
+	step_end
+
+Route123_EventScript_BirchsRescue_Text_0:
+	.string "H-help me!$"
+
+Route123_EventScript_BirchsRescue_Text_1:
+	.string "This Zigzagoon is chasing me! Please help me by battling it!$"
+
+Route123_EventScript_BirchsRescue_Text_2:
+	.string "Whew… \pYou saved me! \nI can't thank you enough. \pOh? \nYou're travelling to experience the world? \pWell if you're going to explore the world of Pokémon this might come in handy!$"
+
+Route123_EventScript_BirchsRescue_Text_3:
+	.string "{PLAYER} received the POKéDEX!$"
+
+Route123_EventScript_BirchsRescue_Text_4:
+	.string "That right there is a POKéDEX. It contains information on POKéMON you have caught. Come visit me in Littleroot Town if you get the chance.$"

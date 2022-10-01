@@ -655,8 +655,8 @@
 #define FLAG_HIDE_FERNET_TOWN_TREECKO   0x265 // New Flag
 #define FLAG_HIDE_FERNET_TOWN_TORCHIC   0x266 // New Flag
 #define FLAG_HIDE_FERNET_TOWN_MUDKIP    0x267 // New Flag
-#define FLAG_UNUSED_0x268  0x268 // Unused Flag
-#define FLAG_UNUSED_0x269  0x269 // Unused Flag
+#define FLAG_ROUTE_123_BIRCH_RESCUE     0x268 // New flag
+#define FLAG_ROUTE_123_ZIGZAGOON        0x269 // New flag
 #define FLAG_UNUSED_0x26A  0x26A // Unused Flag
 #define FLAG_UNUSED_0x26B  0x26B // Unused Flag
 #define FLAG_UNUSED_0x26C  0x26C // Unused Flag
