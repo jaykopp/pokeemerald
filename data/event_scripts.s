@@ -1087,3 +1087,9 @@ Common_EventScript_LegendaryFlewAway::
 	.include "data/maps/Route135/scripts.inc"
 
 	.include "data/maps/BorrowCave/scripts.inc"
+
+	.include "data/maps/MossdeepCity_Harbor/scripts.inc"
+
+	.include "data/maps/IsogladeVillage/scripts.inc"
+
+	.include "data/maps/NewMap1/scripts.inc"

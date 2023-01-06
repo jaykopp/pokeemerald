@@ -180,8 +180,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 57,
-      "y": 4,
+      "x": 58,
+      "y": 5,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
       "movement_range_x": 0,
@@ -193,8 +193,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 65,
-      "y": 3,
+      "x": 66,
+      "y": 4,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -206,7 +206,13 @@
     }
   ],
   "warp_events": [
-
+    {
+      "x": 63,
+      "y": 3,
+      "elevation": 0,
+      "dest_map": "MAP_MOSSDEEP_CITY_HARBOR",
+      "dest_warp_id": 0
+    }
   ],
   "coord_events": [
 

@@ -28,7 +28,7 @@ script BerryVillage_ConstructionHouse_Dad {
 script BerryVillage_ConstructionHouse_BerryBoy {
     lock
     faceplayer
-    msgbox(format("Please battle me mister!"))
+    msgbox(format("I haven't given up! I know that with the right combination I can become the best trainer in the whole region using the power of berries!"))
     releaseall
     end
 }

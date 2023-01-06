@@ -102,7 +102,10 @@
     "PyrePromenade",
     "FernetWoods",
     "Route135",
-    "BorrowCave"
+    "BorrowCave",
+    "MossdeepCity_Harbor",
+    "IsogladeVillage",
+    "NewMap1"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",

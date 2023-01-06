@@ -274,13 +274,24 @@ Route123_EventScript_BirchsRescue_Text_0:
 	.string "H-help me!$"
 
 Route123_EventScript_BirchsRescue_Text_1:
-	.string "This Zigzagoon is chasing me! Please help me by battling it!$"
+	.string "This Zigzagoon is chasing me! Please\n"
+	.string "help me by battling it!$"
 
 Route123_EventScript_BirchsRescue_Text_2:
-	.string "Whew… \pYou saved me! \nI can't thank you enough. \pOh? \nYou're travelling to experience the world? \pWell if you're going to explore the world of Pokémon this might come in handy!$"
+	.string "Whew…\p"
+	.string "You saved me!\n"
+	.string "I can't thank you enough.\p"
+	.string "Oh?\n"
+	.string "You're travelling to experience the\l"
+	.string "world?\p"
+	.string "Well if you're going to explore the world\n"
+	.string "of Pokémon this might come in handy!$"
 
 Route123_EventScript_BirchsRescue_Text_3:
 	.string "{PLAYER} received the POKéDEX!$"
 
 Route123_EventScript_BirchsRescue_Text_4:
-	.string "That right there is a POKéDEX. It contains information on POKéMON you have caught. Come visit me in Littleroot Town if you get the chance.$"
+	.string "That right there is a POKéDEX. It\n"
+	.string "contains information on POKéMON you\l"
+	.string "have caught. Come visit me in\l"
+	.string "Littleroot Town if you get the chance.$"

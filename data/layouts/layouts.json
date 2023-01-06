@@ -4565,11 +4565,41 @@
       "id": "LAYOUT_BORROW_CAVE",
       "name": "BorrowCave_Layout",
       "width": 40,
-      "height": 23,
+      "height": 37,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/BorrowCave/border.bin",
       "blockdata_filepath": "data/layouts/BorrowCave/map.bin"
+    },
+    {
+      "id": "LAYOUT_MOSSDEEP_CITY_HARBOR",
+      "name": "MossdeepCity_Harbor_Layout",
+      "width": 24,
+      "height": 15,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/MossdeepCity_Harbor/border.bin",
+      "blockdata_filepath": "data/layouts/MossdeepCity_Harbor/map.bin"
+    },
+    {
+      "id": "LAYOUT_ISOGLADE_VILLAGE",
+      "name": "IsogladeVillage_Layout",
+      "width": 40,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Dewford",
+      "border_filepath": "data/layouts/IsogladeVillage/border.bin",
+      "blockdata_filepath": "data/layouts/IsogladeVillage/map.bin"
+    },
+    {
+      "id": "LAYOUT_NEW_MAP1",
+      "name": "NewMap1_Layout",
+      "width": 45,
+      "height": 45,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/NewMap1/border.bin",
+      "blockdata_filepath": "data/layouts/NewMap1/map.bin"
     }
   ]
 }

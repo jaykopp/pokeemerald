@@ -299,3 +299,226 @@ Route118_Text_RouteSign119:
 	.string "ROUTE 118\n"
 	.string "{UP_ARROW} ROUTE 119$"
 
+Route118_EventScript_LittleBoyTrigger0::
+	setvar VAR_TEMP_1, 0
+	goto Route118_EventScript_LittleBoyScript
+	return
+
+
+Route118_EventScript_LittleBoyTrigger1::
+	setvar VAR_TEMP_1, 1
+	goto Route118_EventScript_LittleBoyScript
+	return
+
+
+Route118_EventScript_LittleBoyTrigger2::
+	setvar VAR_TEMP_1, 2
+	goto Route118_EventScript_LittleBoyScript
+	return
+
+
+Route118_EventScript_LittleBoyScript::
+	lockall
+	applymovement 21, Route118_LittleBoyMovement6
+	msgbox Route118_EventScript_LittleBoyScript_Text_0
+	msgbox Route118_EventScript_LittleBoyScript_Text_1
+	applymovement 21, Route118_LittleBoyMovement1
+	compare VAR_TEMP_1 == 0, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_2
+	compare VAR_TEMP_1 == 1, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_3
+	applymovement 21, Route118_LittleBoyMovement4
+Route118_EventScript_LittleBoyScript_1:
+	msgbox Route118_EventScript_LittleBoyScript_Text_2
+	trainerbattle_no_intro TRAINER_JIMMY, Route118_EventScript_LittleBoyScript_Text_3
+	msgbox Route118_EventScript_LittleBoyScript_Text_4
+	setvar VAR_ROUTE118_STATE, 1
+	compare VAR_TEMP_1 == 0, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_8
+	compare VAR_TEMP_1 == 1, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_8
+	compare VAR_TEMP_1 == 2, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_9
+Route118_EventScript_LittleBoyScript_7:
+	applymovement 21, Route118_LittleBoyMovement5
+	removeobject 21
+	applymovement 22, Route118_LittleBoyMovement9
+	compare VAR_TEMP_1 == 0, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_15
+	compare VAR_TEMP_1 == 2, 0
+	goto_if_ne Route118_EventScript_LittleBoyScript_16
+Route118_EventScript_LittleBoyScript_14:
+	msgbox Route118_EventScript_LittleBoyScript_Text_5
+	giveitem ITEM_SALAC_BERRY
+	giveitem ITEM_LIECHI_BERRY
+	giveitem ITEM_PETAYA_BERRY
+	msgbox Route118_EventScript_LittleBoyScript_Text_6
+	setflag FLAG_ROUTE118_LITTLE_BOY
+	releaseall
+	end
+
+Route118_EventScript_LittleBoyScript_2:
+	applymovement 21, Route118_LittleBoyMovement2
+	goto Route118_EventScript_LittleBoyScript_1
+
+Route118_EventScript_LittleBoyScript_3:
+	applymovement 21, Route118_LittleBoyMovement3
+	goto Route118_EventScript_LittleBoyScript_1
+
+Route118_EventScript_LittleBoyScript_8:
+	applymovement 21, Route118_LittleBoyMovement7
+	goto Route118_EventScript_LittleBoyScript_7
+
+Route118_EventScript_LittleBoyScript_9:
+	applymovement 21, Route118_LittleBoyMovement8
+	goto Route118_EventScript_LittleBoyScript_7
+
+Route118_EventScript_LittleBoyScript_15:
+	applymovement 22, Route118_FatherMovement1
+	goto Route118_EventScript_LittleBoyScript_14
+
+Route118_EventScript_LittleBoyScript_16:
+	applymovement 22, Route118_FatherMovement2
+	goto Route118_EventScript_LittleBoyScript_14
+
+
+Route118_EventScript_Father::
+	lockall
+	faceplayer
+	msgbox Route118_EventScript_LittleBoyScript_Text_6
+	releaseall
+	end
+
+
+Route118_LittleBoyMovement1:
+	emote_exclamation_mark
+	face_down
+	step_end
+
+Route118_LittleBoyMovement2:
+	walk_fast_down
+	step_end
+
+Route118_LittleBoyMovement3:
+	walk_fast_down
+	walk_fast_right
+	face_down
+	step_end
+
+Route118_LittleBoyMovement4:
+	walk_fast_down
+	walk_fast_right
+	walk_fast_right
+	face_down
+	step_end
+
+Route118_LittleBoyMovement5:
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	walk_fast_down
+	step_end
+
+Route118_LittleBoyMovement6:
+	jump_in_place_up_down
+	step_end
+
+Route118_LittleBoyMovement7:
+	walk_fast_right
+	step_end
+
+Route118_LittleBoyMovement8:
+	walk_fast_left
+	step_end
+
+Route118_LittleBoyMovement9:
+	walk_down
+	step_end
+
+Route118_FatherMovement1:
+	walk_left
+	face_down
+	step_end
+
+Route118_FatherMovement2:
+	walk_right
+	face_down
+	step_end
+
+Route118_Worker1::
+	lock
+	faceplayer
+	msgbox Route118_Worker1_Text_0
+	release
+	end
+
+
+Route118_Worker2::
+	lock
+	faceplayer
+	msgbox Route118_Worker2_Text_0
+	release
+	end
+
+
+Route118_Worker3::
+	lock
+	faceplayer
+	msgbox Route118_Worker3_Text_0
+	release
+	end
+
+
+Route118_EventScript_LittleBoyScript_Text_0:
+	.string "BOY: I want to be the very best! Like no\n"
+	.string "one ever was!$"
+
+Route118_EventScript_LittleBoyScript_Text_1:
+	.string "MAN: There are plenty of strong\n"
+	.string "trainers out there!$"
+
+Route118_EventScript_LittleBoyScript_Text_2:
+	.string "BOY: You look strong! Battle me!$"
+
+Route118_EventScript_LittleBoyScript_Text_3:
+	.string "There are trainers stronger than me?$"
+
+Route118_EventScript_LittleBoyScript_Text_4:
+	.string "BOY: I can't believe my ultimate berry\n"
+	.string "style did not work! Maybe I need to\l"
+	.string "prepare a bit more...$"
+
+Route118_EventScript_LittleBoyScript_Text_5:
+	.string "Thank you for battling my son. He\n"
+	.string "doesn't know much besides the life in\l"
+	.string "the village, so battling in the wider\l"
+	.string "world would come as a shock t him. I am\l"
+	.string "glad his first battle outside the\l"
+	.string "village was someone as capable as you.\p"
+	.string "Take this as a token of my gratitude.$"
+
+Route118_EventScript_LittleBoyScript_Text_6:
+	.string "My father is the Berry Master. He grows\n"
+	.string "all kinds of berries. I hope you find\l"
+	.string "some use for them.$"
+
+Route118_Worker1_Text_0:
+	.string "I can't believe we are almost finished\n"
+	.string "building the road between MAUVILLE\l"
+	.string "and LILYCOVE.$"
+
+Route118_Worker2_Text_0:
+	.string "The bridge to MAUVILLE CITY is nearly\n"
+	.string "complete. After this I am taking a well\l"
+	.string "earned vacation.$"
+
+Route118_Worker3_Text_0:
+	.string "I used to be Pokémon trainer like you,\n"
+	.string "but I never got the hang of battling.\l"
+	.string "Building bridges is where my talent\l"
+	.string "lies!$"

@@ -53,4 +53,7 @@ BerryVillage_ConstructionHouse_Dad_Text_0:
 	.string "some day.$"
 
 BerryVillage_ConstructionHouse_BerryBoy_Text_0:
-	.string "Please battle me mister!$"
+	.string "I haven't given up! I know that with the\n"
+	.string "right combination I can become the\l"
+	.string "best trainer in the whole region using\l"
+	.string "the power of berries!$"

@@ -612,3 +612,138 @@ Route119_Text_TrainerTipsDecoration:
 	.string "Pick your favorite items and create\n"
 	.string "your very own SECRET BASE exactly the\l"
 	.string "way you want.$"
+
+Route119_EventScript_BridgeScientist1::
+	lockall
+	compare VAR_WEATHER_INSTITUTE_STATE, 0
+	goto_if_eq Route119_EventScript_BridgeScientist1_2
+	compare VAR_WEATHER_INSTITUTE_STATE, 1
+	goto_if_eq Route119_EventScript_BridgeScientist1_3
+	compare VAR_WEATHER_INSTITUTE_STATE, 2
+	goto_if_eq Route119_EventScript_BridgeScientist1_4
+Route119_EventScript_BridgeScientist1_1:
+	releaseall
+	end
+
+Route119_EventScript_BridgeScientist1_2:
+	msgbox Route119_EventScript_BridgeScientist1_Text_0
+	applymovement 23, Route119_Scientists_Movement1
+	faceplayer
+	msgbox Route119_EventScript_BridgeScientist1_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Route119_EventScript_BridgeScientist1_8
+	setvar VAR_WEATHER_INSTITUTE_STATE, 2
+	msgbox Route119_EventScript_BridgeScientist1_Text_4
+	applymovement 23, Route119_Scientist1
+	goto Route119_EventScript_BridgeScientist1_1
+
+Route119_EventScript_BridgeScientist1_3:
+	msgbox Route119_EventScript_BridgeScientist1_Text_5
+	goto Route119_EventScript_BridgeScientist1_1
+
+Route119_EventScript_BridgeScientist1_4:
+	msgbox Route119_EventScript_BridgeScientist1_Text_6
+	goto Route119_EventScript_BridgeScientist1_1
+
+Route119_EventScript_BridgeScientist1_8:
+	setvar VAR_WEATHER_INSTITUTE_STATE, 1
+	msgbox Route119_EventScript_BridgeScientist1_Text_2
+	giveitem ITEM_POKE_BALL, 10
+	msgbox Route119_EventScript_BridgeScientist1_Text_3
+	goto Route119_EventScript_BridgeScientist1_1
+
+
+Route119_EventScript_BridgeScientist2::
+	lockall
+	compare VAR_WEATHER_INSTITUTE_STATE, 0
+	goto_if_eq Route119_EventScript_BridgeScientist2_2
+	compare VAR_WEATHER_INSTITUTE_STATE, 1
+	goto_if_eq Route119_EventScript_BridgeScientist2_3
+	compare VAR_WEATHER_INSTITUTE_STATE, 2
+	goto_if_eq Route119_EventScript_BridgeScientist2_4
+Route119_EventScript_BridgeScientist2_1:
+	releaseall
+	end
+
+Route119_EventScript_BridgeScientist2_2:
+	msgbox Route119_EventScript_BridgeScientist1_Text_0
+	applymovement 24, Route119_Scientists_Movement1
+	faceplayer
+	msgbox Route119_EventScript_BridgeScientist1_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq Route119_EventScript_BridgeScientist2_8
+	setvar VAR_WEATHER_INSTITUTE_STATE, 2
+	msgbox Route119_EventScript_BridgeScientist1_Text_4
+	applymovement 24, Route119_Scientist2
+	goto Route119_EventScript_BridgeScientist2_1
+
+Route119_EventScript_BridgeScientist2_3:
+	msgbox Route119_EventScript_BridgeScientist1_Text_5
+	goto Route119_EventScript_BridgeScientist2_1
+
+Route119_EventScript_BridgeScientist2_4:
+	msgbox Route119_EventScript_BridgeScientist2_Text_0
+	goto Route119_EventScript_BridgeScientist2_1
+
+Route119_EventScript_BridgeScientist2_8:
+	setvar VAR_WEATHER_INSTITUTE_STATE, 1
+	msgbox Route119_EventScript_BridgeScientist1_Text_2
+	giveitem ITEM_POKE_BALL, 10
+	msgbox Route119_EventScript_BridgeScientist1_Text_3
+	goto Route119_EventScript_BridgeScientist2_1
+
+
+Route119_Scientists_Movement1:
+	emote_exclamation_mark
+	step_end
+
+Route119_Scientist1:
+	walk_up
+	face_down
+	step_end
+
+Route119_Scientist2:
+	walk_down
+	face_up
+	step_end
+
+Route119_EventScript_BridgeScientist1_Text_0:
+	.string "If only we were better at catching\n"
+	.string "Pokémon ...$"
+
+Route119_EventScript_BridgeScientist1_Text_1:
+	.string "You seem like a capable player. Could\n"
+	.string "you help us catch a CASTFORM?$"
+
+Route119_EventScript_BridgeScientist1_Text_2:
+	.string "That's great!\l"
+	.string "Some time ago, some specimen escaped\l"
+	.string "from the institute. We are trying to\l"
+	.string "study how the CASTFORM have adapted\l"
+	.string "to living in the wild.\p"
+	.string "I'll give you some Pokéballs to help you\n"
+	.string "catch them!$"
+
+Route119_EventScript_BridgeScientist1_Text_3:
+	.string "Hopefully that will be enough for you to\n"
+	.string "catch a CASTFORM.\p"
+	.string "Come to talk to one of us if you ever\n"
+	.string "run out of Pokéballs. You can heal at\l"
+	.string "the bed inside the institue as well.$"
+
+Route119_EventScript_BridgeScientist1_Text_4:
+	.string "Oh..\l"
+	.string "That's too bad.\p"
+	.string "I guess we have to figure this out\n"
+	.string "ourselves. I'll get out of your way.$"
+
+Route119_EventScript_BridgeScientist1_Text_5:
+	.string "Have you catched a CASTFORM yet?$"
+
+Route119_EventScript_BridgeScientist1_Text_6:
+	.string "We'll have to catch a CASTFORM\n"
+	.string "ourselves.$"
+
+Route119_EventScript_BridgeScientist2_Text_0:
+	.string "Catching Pokémon can't be that hard\n"
+	.string "right?$"
