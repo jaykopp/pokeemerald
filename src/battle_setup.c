@@ -882,6 +882,28 @@ void ChooseStarter(void)
     gMain.savedCallback = CB2_GiveStarter;
 }
 
+// Første forsøk på å få igang prof Birch greia
+void DoForcedWildBattle(void);
+void DoForcedWildBattle(void)
+{
+    u16 starterMon;
+}
+static void DoStandardWildBattle2(void);
+static void DoStandardWildBattle2(void)
+{
+    ScriptContext2_Enable();
+    FreezeObjectEvents();
+    StopPlayerAvatar();
+    gMain.savedCallback = CB2_EndWildBattle;
+    gBattleTypeFlags = BATTLE_TYPE_FIRST_BATTLE;
+    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
+    IncrementGameStat(GAME_STAT_WILD_BATTLES);
+    IncrementDailyWildBattles();
+    TryUpdateGymLeaderRematchFromWild();
+}
+//
+
 static void CB2_GiveStarter(void)
 {
     u16 starterMon;
