@@ -707,6 +707,14 @@ Route119_Scientist2:
 	face_up
 	step_end
 
+Route119_EventScript_Testing::
+	lockall
+	faceplayer
+	msgbox Route119_EventScript_Testing_Text_0
+	releaseall
+	end
+
+
 Route119_EventScript_BridgeScientist1_Text_0:
 	.string "If only we were better at catching\n"
 	.string "Pokémon ...$"
@@ -747,3 +755,6 @@ Route119_EventScript_BridgeScientist1_Text_6:
 Route119_EventScript_BridgeScientist2_Text_0:
 	.string "Catching Pokémon can't be that hard\n"
 	.string "right?$"
+
+Route119_EventScript_Testing_Text_0:
+	.string "This is a great test!$"

@@ -686,3 +686,11 @@ movement Route119_Scientist2 {
     walk_down
     face_up
 }
+
+script Route119_EventScript_Testing {
+	lockall
+	faceplayer
+	msgbox(format("This is a great test!"))
+	releaseall
+	end
+}

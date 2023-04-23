@@ -430,3 +430,63 @@ Route120_Text_RouteSignFortree:
 Route120_Text_RouteSign121:
 	.string "{RIGHT_ARROW} ROUTE 121\n"
 	.string "{LEFT_ARROW} ROUTE 120$"
+
+Route120_EventScript_GymTrainer1::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer1_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_GymTrainer2::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer2_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_GymTrainer3::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer3_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_GymTrainer4::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer1_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_GymTrainer5::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer1_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_Winona::
+	lockall
+	faceplayer
+	msgbox Route120_EventScript_GymTrainer1_Text_0
+	releaseall
+	end
+
+
+Route120_EventScript_GymTrainer1_Text_0:
+	.string "There's some Swablus in the area that\n"
+	.string "need peace.$"
+
+Route120_EventScript_GymTrainer2_Text_0:
+	.string "Winona is a great Gym leader, but also a\n"
+	.string "great Pokémon conservationist.$"
+
+Route120_EventScript_GymTrainer3_Text_0:
+	.string "Don't make too much noise, the Swablus\n"
+	.string "are sensitive to sound.$"
