@@ -707,12 +707,44 @@ Route119_Scientist2:
 	face_up
 	step_end
 
-Route119_EventScript_Testing::
-	lockall
+Route119_EventScript_WingullTrade::
+	lock
 	faceplayer
-	msgbox Route119_EventScript_Testing_Text_0
-	releaseall
+	goto_if_set FLAG_INGAME_WINGULL_TRADE, Route119_EventScript_WingullTrade_2
+	setvar VAR_0x8008, INGAME_TRADE_WINGULL
+	copyvar VAR_0x8004, VAR_0x8008
+	specialvar VAR_0x8009, GetInGameTradeSpeciesInfo
+	msgbox Route119_EventScript_WingullTrade_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq Route119_EventScript_WingullTrade_5
+	special ChoosePartyMon
+	waitstate
+	compare VAR_0x8004, PARTY_NOTHING_CHOSEN
+	goto_if_eq Route119_EventScript_WingullTrade_8
+Route119_EventScript_WingullTrade_7:
+	copyvar VAR_0x8005, VAR_0x8004
+	specialvar VAR_RESULT, GetTradeSpecies
+	compare VAR_RESULT, VAR_0x8009
+	goto_if_ne Route119_EventScript_WingullTrade_11
+Route119_EventScript_WingullTrade_10:
 	end
+
+Route119_EventScript_WingullTrade_2:
+	msgbox Route119_EventScript_WingullTrade_Text_0
+	end
+
+Route119_EventScript_WingullTrade_5:
+	msgbox Route119_EventScript_WingullTrade_Text_2
+	end
+
+Route119_EventScript_WingullTrade_8:
+	msgbox Route119_EventScript_WingullTrade_Text_3
+	goto Route119_EventScript_WingullTrade_7
+
+Route119_EventScript_WingullTrade_11:
+	bufferspeciesname STR_VAR_1, VAR_0x8009
+	msgbox Route119_EventScript_WingullTrade_Text_4
+	goto Route119_EventScript_WingullTrade_10
 
 
 Route119_EventScript_BridgeScientist1_Text_0:
@@ -756,5 +788,24 @@ Route119_EventScript_BridgeScientist2_Text_0:
 	.string "Catching Pokémon can't be that hard\n"
 	.string "right?$"
 
-Route119_EventScript_Testing_Text_0:
-	.string "This is a great test!$"
+Route119_EventScript_WingullTrade_Text_0:
+	.string "Your Wingull fits right in with the\n"
+	.string "others. Thanks for trading with me!$"
+
+Route119_EventScript_WingullTrade_Text_1:
+	.string "I am known as the Wingull man because\n"
+	.string "of all the Wingull's I tend to.\n"
+	.string "The other day I caught a funny looking\l"
+	.string "one.\l"
+	.string "It doesn't fit in with the others.$"
+
+Route119_EventScript_WingullTrade_Text_2:
+	.string "Well it's alright, it's not that ugly.$"
+
+Route119_EventScript_WingullTrade_Text_3:
+	.string "Maybe another time.$"
+
+Route119_EventScript_WingullTrade_Text_4:
+	.string "I'm sorry but that is not a\n"
+	.string "{STR_VAR_1}, I cannot trade with\l"
+	.string "you.$"

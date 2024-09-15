@@ -687,10 +687,33 @@ movement Route119_Scientist2 {
     face_up
 }
 
-script Route119_EventScript_Testing {
-	lockall
+script Route119_EventScript_WingullTrade {
+	lock
 	faceplayer
-	msgbox(format("This is a great test!"))
-	releaseall
+	if(flag(FLAG_INGAME_WINGULL_TRADE)) {
+		msgbox(format("Your Wingull fits right in with the others. Thanks for trading with me!"))
+		end
+	}
+	setvar(VAR_0x8008, INGAME_TRADE_WINGULL)
+	copyvar(VAR_0x8004, VAR_0x8008)
+	specialvar(VAR_0x8009, GetInGameTradeSpeciesInfo)
+	msgbox(format("I am known as the Wingull man because of all the Wingull's I tend to. \nThe other day I caught a funny looking one. \lIt doesn't fit in with the others."), MSGBOX_YESNO)
+	if(var(VAR_RESULT) == NO){
+		msgbox(format("Well it's alright, it's not that ugly."))
+		end
+	}
+
+	// Handle the selection of the requested mon from the player
+	special(ChoosePartyMon)
+	waitstate
+	if(var(VAR_0x8004) == PARTY_NOTHING_CHOSEN){
+		msgbox(format("Maybe another time."))
+	}
+	copyvar(VAR_0x8005, VAR_0x8004)
+	specialvar(VAR_RESULT, GetTradeSpecies)
+	if(var(VAR_RESULT) != VAR_0x8009){
+		bufferspeciesname(STR_VAR_1, VAR_0x8009)
+		msgbox(format("I'm sorry but that is not a {STR_VAR_1}, I cannot trade with you.$"))
+	}	
 	end
 }
