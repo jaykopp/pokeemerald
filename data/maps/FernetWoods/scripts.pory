@@ -1,3 +1,5 @@
+const LOCALID_RIVAL = 1
+
 mapscripts FernetWoods_MapScripts {
 }
 
@@ -14,31 +16,44 @@ script FernetWoods_EventScript_Jonas {
 }
 
 script FernetWoods_EventScript_RivalTrigger1 {
-    setvar(VAR_TEMP_1, 1)
+    applymovement(LOCALID_RIVAL, FernetWoods_Rival_Movement1)
     goto(FernetWoods_EventScript_Rival)
 	end
 
 }
 
 script FernetWoods_EventScript_RivalTrigger2 {
-    setvar(VAR_TEMP_1, 2)
+    applymovement(LOCALID_RIVAL, FernetWoods_Rival_Movement2)
     goto(FernetWoods_EventScript_Rival)
 	end
 }
 
 script FernetWoods_EventScript_Rival {
-    lockall
-    msgbox(format("Hey {PLAYER}! I heard grandpa gave you a Pokémon. He gave me one too! Let's battle with them!"))
-    switch(var(VAR_STARTER_MON)) {
-        case 0: 
-            trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TREECKO, "I lost?")
-        case 1: 
-            trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TORCHIC, "I lost?")
-        case 2: 
-            trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_MUDKIP, "I lost?")
+    if(var(VAR_FERNET_WOODS_RIVAL_STATE) == 0) {
+        lockall
+        msgbox(format("Hey {PLAYER}! I heard grandpa gave you a Pokémon. He gave me one too! Let's battle with them!"))
+        switch(var(VAR_STARTER_MON)) {
+            case 0: 
+                trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TREECKO, "I lost?")
+            case 1: 
+                trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_TORCHIC, "I lost?")
+            case 2: 
+                trainerbattle_no_intro(TRAINER_MAY_ROUTE_103_MUDKIP, "I lost?")
+        }
+        msgbox(format("Damn! You already have gotten the hang of battling, huh?"), MSGBOX_DEFAULT)
+        setvar(VAR_FERNET_WOODS_RIVAL_STATE, 1)
+        release
     }
-    msgbox(format("Damn! You already have gotten the hang of battling, huh?"))
-    
     end
 }
 
+movement FernetWoods_Rival_Movement1 {
+    walk_right
+    walk_right
+}
+
+movement FernetWoods_Rival_Movement2 {
+    walk_right
+    walk_down
+    walk_right
+}

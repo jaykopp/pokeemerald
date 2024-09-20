@@ -14,6 +14,8 @@ FernetTown_Girl::
 	faceplayer
 	setvar VAR_FERNET_TOWN_ELDER, 0
 	msgbox FernetTown_Girl_Text_0
+	special HealPlayerParty
+	setrespawn HEAL_LOCATION_FERNET_TOWN
 	release
 	end
 

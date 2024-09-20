@@ -15,40 +15,59 @@ FernetWoods_EventScript_Jonas::
 
 
 FernetWoods_EventScript_RivalTrigger1::
-	setvar VAR_TEMP_1, 1
+	applymovement 1, FernetWoods_Rival_Movement1
 	goto FernetWoods_EventScript_Rival
 	end
 
 
 FernetWoods_EventScript_RivalTrigger2::
-	setvar VAR_TEMP_1, 2
+	applymovement 1, FernetWoods_Rival_Movement2
 	goto FernetWoods_EventScript_Rival
 	end
 
 
 FernetWoods_EventScript_Rival::
+	compare VAR_FERNET_WOODS_RIVAL_STATE, 0
+	goto_if_eq FernetWoods_EventScript_Rival_2
+FernetWoods_EventScript_Rival_1:
+	end
+
+FernetWoods_EventScript_Rival_2:
 	lockall
 	msgbox FernetWoods_EventScript_Rival_Text_0
 	switch VAR_STARTER_MON
-	case 0, FernetWoods_EventScript_Rival_3
-	case 1, FernetWoods_EventScript_Rival_4
-	case 2, FernetWoods_EventScript_Rival_5
-FernetWoods_EventScript_Rival_1:
-	msgbox FernetWoods_EventScript_Rival_Text_2
-	end
-
-FernetWoods_EventScript_Rival_3:
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, FernetWoods_EventScript_Rival_Text_1
-	goto FernetWoods_EventScript_Rival_1
-
+	case 0, FernetWoods_EventScript_Rival_6
+	case 1, FernetWoods_EventScript_Rival_7
+	case 2, FernetWoods_EventScript_Rival_8
 FernetWoods_EventScript_Rival_4:
+	msgbox FernetWoods_EventScript_Rival_Text_2, MSGBOX_DEFAULT
+	setvar VAR_FERNET_WOODS_RIVAL_STATE, 1
+	release
+	goto FernetWoods_EventScript_Rival_1
+
+FernetWoods_EventScript_Rival_6:
+	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TREECKO, FernetWoods_EventScript_Rival_Text_1
+	goto FernetWoods_EventScript_Rival_4
+
+FernetWoods_EventScript_Rival_7:
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_TORCHIC, FernetWoods_EventScript_Rival_Text_1
-	goto FernetWoods_EventScript_Rival_1
+	goto FernetWoods_EventScript_Rival_4
 
-FernetWoods_EventScript_Rival_5:
+FernetWoods_EventScript_Rival_8:
 	trainerbattle_no_intro TRAINER_MAY_ROUTE_103_MUDKIP, FernetWoods_EventScript_Rival_Text_1
-	goto FernetWoods_EventScript_Rival_1
+	goto FernetWoods_EventScript_Rival_4
 
+
+FernetWoods_Rival_Movement1:
+	walk_right
+	walk_right
+	step_end
+
+FernetWoods_Rival_Movement2:
+	walk_right
+	walk_down
+	walk_right
+	step_end
 
 FernetWoods_EventScript_Ed_Text_0:
 	.string "I got lost in these woods. \n Fortunately I caught a new POKéMON!$"
