@@ -42,11 +42,6 @@ Route123_EventScript_BerryMastersHouseSign::
 	msgbox Route123_Text_BerryMastersHouse, MSGBOX_SIGN
 	end
 
-Route123_EventScript_Wendy::
-	trainerbattle_single TRAINER_WENDY, Route123_Text_WendyIntro, Route123_Text_WendyDefeat
-	msgbox Route123_Text_WendyPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Braxton::
 	trainerbattle_single TRAINER_BRAXTON, Route123_Text_BraxtonIntro, Route123_Text_BraxtonDefeat
 	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
@@ -78,13 +73,12 @@ Route123_EventScript_Violet::
 // 	msgbox Route123_Text_CameronPostRematch, MSGBOX_AUTOCLOSE
 // 	end
 
-Route123_EventScript_Jacki::
-	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchJacki
-	msgbox Route123_Text_JackiPostBattle, MSGBOX_DEFAULT
-	release
-	end
+// Route123_EventScript_Jacki::
+//	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
+//	specialvar VAR_RESULT, ShouldTryRematchBattle
+//	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchJacki
+//	release
+//	end
 
 Route123_EventScript_RegisterJacki::
 	special PlayerFaceTrainerAfterBattle
@@ -112,11 +106,6 @@ Route123_EventScript_Yuki::
 Route123_EventScript_Kindra::
 	trainerbattle_single TRAINER_KINDRA, Route123_Text_KindraIntro, Route123_Text_KindraDefeat
 	msgbox Route123_Text_KindraPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route123_EventScript_Frederick::
-	trainerbattle_single TRAINER_FREDRICK, Route123_Text_FrederickIntro, Route123_Text_FrederickDefeat
-	msgbox Route123_Text_FrederickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route123_EventScript_Alberto::
@@ -259,6 +248,19 @@ Route123_EventScript_Wendell::
 	end
 
 
+Route123_EventScript_Jacki::
+	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
+	msgbox Route123_Text_JackiPostBattle, MSGBOX_DEFAULT
+	release
+	end
+
+
+Route123_EventScript_Frederick::
+	trainerbattle_single TRAINER_FREDRICK, Route123_EventScript_Frederick_Text_0, Route123_EventScript_Frederick_Text_1
+	msgbox Route123_EventScript_Frederick_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
 BirchChase:
 	walk_right
 	walk_right
@@ -312,3 +314,16 @@ Route123_EventScript_Wendell_Text_1:
 
 Route123_EventScript_Wendell_Text_2:
 	.string "Battling can be so tiresome as well...$"
+
+Route123_EventScript_Frederick_Text_0:
+	.string "I'm doing a school project on the new\n"
+	.string "road they're building. Battle me in the\l"
+	.string "study break!$"
+
+Route123_EventScript_Frederick_Text_1:
+	.string "Breaks over I guess...$"
+
+Route123_EventScript_Frederick_Text_2:
+	.string "The road has been built on time and on\n"
+	.string "schedule. It's almost as good as my\l"
+	.string "report!$"

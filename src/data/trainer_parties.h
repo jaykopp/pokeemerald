@@ -309,17 +309,17 @@ static const struct TrainerMon sParty_GruntAquaHideout6[] = {
 static const struct TrainerMon sParty_Fredrick[] = {
     {
     .iv = 100,
-    .lvl = 6,
+    .lvl = 5,
     .species = SPECIES_POOCHYENA,
     },
     {
     .iv = 100,
-    .lvl = 6,
+    .lvl = 5,
     .species = SPECIES_SENTRET,
     },
     {
     .iv = 100,
-    .lvl = 6,
+    .lvl = 5,
     .species = SPECIES_NIDORAN_M,
     }
 };
@@ -446,13 +446,13 @@ static const struct TrainerMon sParty_Felix[] = {
 static const struct TrainerMon sParty_Violet[] = {
     {
     .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_ODDISH,
+    .lvl = 5,
+    .species = SPECIES_TRAPINCH,
     },
     {
     .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_SHROOMISH,
+    .lvl = 5,
+    .species = SPECIES_MACHOP,
     }
 };
 
@@ -880,13 +880,13 @@ static const struct TrainerMon sParty_Braxton[] = {
     {
     .iv = 100,
     .lvl = 6,
-    .species = SPECIES_LUVDISC,
+    .species = SPECIES_VOLTORB,
     .moves = {MOVE_TACKLE, MOVE_CHARM, MOVE_ICY_WIND, MOVE_NONE}
     },
     {
     .iv = 100,
     .lvl = 6,
-    .species = SPECIES_PICHU,
+    .species = SPECIES_TYROGUE,
     .moves = {MOVE_THUNDER_SHOCK, MOVE_CHARM, MOVE_TAIL_WHIP, MOVE_ENCORE}
     }
 };
@@ -1144,17 +1144,17 @@ static const struct TrainerMon sParty_Wendell[] = {
     {
     .iv = 100,
     .lvl = 5,
-    .species = SPECIES_RALTS
+    .species = SPECIES_MACHOP
     },
     {
     .iv = 100,
     .lvl = 5,
-    .species = SPECIES_EKANS
+    .species = SPECIES_VOLTORB
     },
     {
     .iv = 100,
     .lvl = 5,
-    .species = SPECIES_WINGULL
+    .species = SPECIES_MAKUHITA
     }
 };
 
@@ -3119,12 +3119,12 @@ static const struct TrainerMon sParty_Jacki1[] = {
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_SMOOCHUM,
+    .species = SPECIES_SLUGMA,
     },
     {
     .iv = 0,
     .lvl = 5,
-    .species = SPECIES_EXEGGCUTE,
+    .species = SPECIES_GEODUDE,
     }
 };
 
@@ -6647,13 +6647,13 @@ static const struct TrainerMon sParty_Jonas[] = {
 static const struct TrainerMon sParty_Kayley[] = {
     {
     .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_BELLSPROUT,
+    .lvl = 5,
+    .species = SPECIES_NUMEL,
     },
     {
     .iv = 0,
-    .lvl = 6,
-    .species = SPECIES_AZURILL,
+    .lvl = 5,
+    .species = SPECIES_LARVITAR,
     }
 };
 
