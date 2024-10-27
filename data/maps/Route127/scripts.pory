@@ -78,3 +78,11 @@ Route127_EventScript_RematchKoji::
 	end
 
 `
+
+script Route127_EventScript_Fisherman {
+    lockall
+    faceplayer
+    msgbox(format("Ever since the new port came, there have been less fish in these waters."))
+    releaseall
+    end
+}

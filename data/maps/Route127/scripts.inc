@@ -75,3 +75,15 @@ Route127_EventScript_RematchKoji::
 	trainerbattle_rematch TRAINER_KOJI_1, Route127_Text_KojiRematchIntro, Route127_Text_KojiRematchDefeat
 	msgbox Route127_Text_KojiPostRematch, MSGBOX_AUTOCLOSE
 	end
+
+Route127_EventScript_Fisherman::
+	lockall
+	faceplayer
+	msgbox Route127_EventScript_Fisherman_Text_0
+	releaseall
+	end
+
+
+Route127_EventScript_Fisherman_Text_0:
+	.string "Ever since the new port came, there\n"
+	.string "have been less fish in these waters.$"
