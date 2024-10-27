@@ -66,8 +66,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AZURILL",
-      "x": 8,
-      "y": 12,
+      "x": 7,
+      "y": 11,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_LOOK_AROUND",
       "movement_range_x": 1,
@@ -102,7 +102,7 @@
     },
     {
       "x": 6,
-      "y": 17,
+      "y": 16,
       "elevation": 0,
       "dest_map": "MAP_FALLARBOR_TOWN_COZMOS_HOUSE",
       "dest_warp_id": 0
