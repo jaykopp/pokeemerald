@@ -144,11 +144,6 @@ Route123_EventScript_Jazmyn::
 	msgbox Route123_Text_JazmynPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Davis::
-	trainerbattle_single TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat
-	msgbox Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Fernando::
 	trainerbattle_single TRAINER_FERNANDO_1, Route123_Text_FernandoIntro, Route123_Text_FernandoDefeat, Route123_EventScript_RegisterFernando
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -252,6 +247,18 @@ Route123_EventScript_BirchsRescue_4:
 	goto Route123_EventScript_BirchsRescue_1
 
 
+Route123_EventScript_Davis::
+	trainerbattle_single TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat
+	msgbox Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+Route123_EventScript_Wendell::
+	trainerbattle_single TRAINER_WENDELL, Route123_EventScript_Wendell_Text_0, Route123_EventScript_Wendell_Text_1
+	msgbox Route123_EventScript_Wendell_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
 BirchChase:
 	walk_right
 	walk_right
@@ -295,3 +302,13 @@ Route123_EventScript_BirchsRescue_Text_4:
 	.string "contains information on POKéMON you\l"
 	.string "have caught. Come visit me in\l"
 	.string "Littleroot Town if you get the chance.$"
+
+Route123_EventScript_Wendell_Text_0:
+	.string "I'm tired of working. Let's battle\n"
+	.string "instead!$"
+
+Route123_EventScript_Wendell_Text_1:
+	.string "Damn, back to work I guess.$"
+
+Route123_EventScript_Wendell_Text_2:
+	.string "Battling can be so tiresome as well...$"

@@ -93,7 +93,7 @@
 #define TRAINER_MARY                         89
 #define TRAINER_ALEXIA                       90
 #define TRAINER_JODY                         91
-#define TRAINER_WENDY                        92
+#define TRAINER_WENDELL                        92
 #define TRAINER_KEIRA                        93
 #define TRAINER_BROOKE_1                     94
 #define TRAINER_JENNIFER                     95
@@ -271,7 +271,7 @@
 #define TRAINER_DRAKE                       264
 #define TRAINER_ROXANNE_1                   265
 #define TRAINER_BRAWLY_1                    266
-#define TRAINER_WATTSON_1                   267
+#define TRAINER_ELRIC_1                     267
 #define TRAINER_FLANNERY_1                  268
 #define TRAINER_NORMAN_1                    269
 #define TRAINER_WINONA_1                    270

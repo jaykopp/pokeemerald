@@ -145,11 +145,6 @@ Route123_EventScript_Jazmyn::
 	msgbox Route123_Text_JazmynPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Davis::
-	trainerbattle_single TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat
-	msgbox Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 Route123_EventScript_Fernando::
 	trainerbattle_single TRAINER_FERNANDO_1, Route123_Text_FernandoIntro, Route123_Text_FernandoDefeat, Route123_EventScript_RegisterFernando
 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -250,6 +245,22 @@ script Route123_EventScript_BirchsRescue {
     releaseall
     end
 }
+
+script Route123_EventScript_Davis{
+	trainerbattle_single(TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat)
+	msgbox(Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE)
+	end
+}
+
+script Route123_EventScript_Wendell{
+	trainerbattle_single(TRAINER_WENDELL, format("I'm tired of working. Let's battle instead!"), format("Damn, back to work I guess."))
+	msgbox(format("Battling can be so tiresome as well..."), MSGBOX_AUTOCLOSE)
+	end
+}
+	
+
+
+	
 
 movement BirchChase {
     walk_right * 7
