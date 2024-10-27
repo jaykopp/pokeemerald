@@ -73,69 +73,6 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle::
 	special MauvilleGymDeactivatePuzzle
 	end
 
-MauvilleCity_Gym_EventScript_Wattson::
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonIntro, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, MauvilleCity_Gym_EventScript_WattsonRematch
-	goto_if_unset FLAG_RECEIVED_TM34, MauvilleCity_Gym_EventScript_GiveShockWave2
-	goto_if_eq VAR_NEW_MAUVILLE_STATE, 2, MauvilleCity_Gym_EventScript_CompletedNewMauville
-	msgbox MauvilleCity_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
-	release
-	end
-
-MauvilleCity_Gym_EventScript_WattsonDefeated::
-	message MauvilleCity_Gym_Text_ReceivedDynamoBadge
-	waitmessage
-	call Common_EventScript_PlayGymBadgeFanfare
-	msgbox MauvilleCity_Gym_Text_ExplainDynamoBadgeTakeThis, MSGBOX_DEFAULT
-	setvar VAR_SLATEPORT_OUTSIDE_MUSEUM_STATE, 3
-	clearflag FLAG_HIDE_VERDANTURF_TOWN_SCOTT
-	setflag FLAG_DEFEATED_MAUVILLE_GYM
-	setflag FLAG_BADGE03_GET
-	addvar VAR_PETALBURG_GYM_STATE, 1
-	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
-	setvar VAR_0x8008, 3
-	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
-	special DrawWholeMapView
-	playse SE_UNLOCK
-	call MauvilleCity_Gym_EventScript_GiveShockWave
-	closemessage
-	delay 30
-	playfanfare MUS_REGISTER_MATCH_CALL
-	msgbox MauvilleCity_Gym_Text_RegisteredWattson, MSGBOX_DEFAULT
-	waitfanfare
-	closemessage
-	delay 30
-	setflag FLAG_ENABLE_WATTSON_MATCH_CALL
-	release
-	end
-
-MauvilleCity_Gym_EventScript_GiveShockWave2::
-	giveitem ITEM_TM34
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
-	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM34
-	release
-	end
-
-MauvilleCity_Gym_EventScript_GiveShockWave::
-	giveitem ITEM_TM34
-	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_BagIsFull
-	msgbox MauvilleCity_Gym_Text_ExplainShockWave, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_TM34
-	return
-
-MauvilleCity_Gym_EventScript_CompletedNewMauville::
-	msgbox MauvilleCity_Gym_Text_WattsonGoForthAndEndeavor, MSGBOX_DEFAULT
-	release
-	end
-
-MauvilleCity_Gym_EventScript_WattsonRematch::
-	trainerbattle_rematch_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreRematch, MauvilleCity_Gym_Text_WattsonRematchDefeat, MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons
-	msgbox MauvilleCity_Gym_Text_WattsonPostRematch, MSGBOX_AUTOCLOSE
-	end
-
 MauvilleCity_Gym_EventScript_Switch1::
 	lockall
 	goto_if_set FLAG_DEFEATED_MAUVILLE_GYM, MauvilleCity_Gym_EventScript_SwitchDoNothing
@@ -211,11 +148,6 @@ MauvilleCity_Gym_EventScript_Ben::
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-MauvilleCity_Gym_EventScript_Vivian::
-	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianIntro, MauvilleCity_Gym_Text_VivianDefeat
-	msgbox MauvilleCity_Gym_Text_VivianPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 MauvilleCity_Gym_EventScript_Angelo::
 	trainerbattle_single TRAINER_ANGELO, MauvilleCity_Gym_Text_AngeloIntro, MauvilleCity_Gym_Text_AngeloDefeat
 	msgbox MauvilleCity_Gym_Text_AngeloPostBattle, MSGBOX_AUTOCLOSE
@@ -259,7 +191,7 @@ MauvilleCity_Gym_EventScript_GymStatue::
 MauvilleCity_Gym_Text_GymGuideAdvice:
 	.string "Hey, how's it going, CHAMPION-\n"
 	.string "bound {PLAYER}?\p"
-	.string "WATTSON, the LEADER of MAUVILLE\n"
+	.string "ELRIC, the LEADER of MAUVILLE\n"
 	.string "GYM, uses ELECTRIC-type POKéMON.\p"
 	.string "If you challenge him with WATER-type\n"
 	.string "POKéMON, he'll zap them! Bzzt!\p"
@@ -418,3 +350,48 @@ MauvilleCity_Gym_Text_WattsonRematchNeedTwoMons:
 	.string "You've only one POKéMON with you!\p"
 	.string "Come see me with two or more\n"
 	.string "POKéMON, all right?$"
+
+MauvilleCity_Gym_EventScript_Elric::
+	trainerbattle_single TRAINER_ELRIC_1, MauvilleCity_Gym_EventScript_Elric_Text_0, MauvilleCity_Gym_EventScript_Elric_Text_1, MauvilleCity_Gym_EventScript_Elric_Text_2, NO_MUSIC
+	specialvar VAR_RESULT, ShouldTryRematchBattle
+	msgbox MauvilleCity_Gym_EventScript_Elric_Text_3, MSGBOX_DEFAULT
+	release
+	end
+
+
+MauvilleCity_Gym_EventScript_Vivian::
+	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_EventScript_Vivian_Text_0, MauvilleCity_Gym_Text_VivianDefeat
+	msgbox MauvilleCity_Gym_EventScript_Vivian_Text_1, MSGBOX_AUTOCLOSE
+	end
+
+
+MauvilleCity_Gym_EventScript_Elric_Text_0:
+	.string "A new challenger!\n"
+	.string "I have to keep battling new\l"
+	.string "challengers, to get new battle\l"
+	.string "experiences, new trainer experinces\l"
+	.string "and new POKéMON. You! Thank you for\l"
+	.string "showing up and helping me grow as a gym\l"
+	.string "leader. Lets grow together through\l"
+	.string "POKéMON battle!$"
+
+MauvilleCity_Gym_EventScript_Elric_Text_1:
+	.string "A defeat! Well, growth is possible\n"
+	.string "through defeat as well.$"
+
+MauvilleCity_Gym_EventScript_Elric_Text_2:
+	.string "Thank you for this experience. Here,\n"
+	.string "take this:$"
+
+MauvilleCity_Gym_EventScript_Elric_Text_3:
+	.string "Perhaps in the future you can help\n"
+	.string "Mauville and Hoenn grow to even\l"
+	.string "further highs.$"
+
+MauvilleCity_Gym_EventScript_Vivian_Text_0:
+	.string "Get ready to be shocked by my charm!$"
+
+MauvilleCity_Gym_EventScript_Vivian_Text_1:
+	.string "Ever since Elric took over the gym,\n"
+	.string "there have been shocking\l"
+	.string "developments.$"
