@@ -214,8 +214,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 22,
-      "y": 16,
+      "x": 21,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -223,12 +223,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_BERRY_VILLAGE_BOY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MAN_1",
-      "x": 23,
-      "y": 16,
+      "x": 22,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -236,7 +236,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_BERRY_VILLAGE_BOY"
     }
   ],
   "warp_events": [
@@ -282,9 +282,9 @@
       "x": 26,
       "y": 8,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BERRY_VILLAGE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BerryVillage_EventScript_LittleBoy"
     },
     {
       "type": "trigger",
@@ -300,36 +300,36 @@
       "x": 26,
       "y": 9,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BERRY_VILLAGE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BerryVillage_EventScript_LittleBoy"
     },
     {
       "type": "trigger",
       "x": 25,
       "y": 10,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BERRY_VILLAGE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BerryVillage_EventScript_LittleBoy"
     },
     {
       "type": "trigger",
       "x": 25,
       "y": 11,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BERRY_VILLAGE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BerryVillage_EventScript_LittleBoy"
     },
     {
       "type": "trigger",
       "x": 25,
       "y": 12,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_BERRY_VILLAGE_STATE",
       "var_value": "0",
-      "script": "NULL"
+      "script": "BerryVillage_EventScript_LittleBoy"
     }
   ],
   "bg_events": [

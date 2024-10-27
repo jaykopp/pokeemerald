@@ -1,9 +1,9 @@
+const LITTLE_BOY = 15
+const DAD = 16
+
 mapscripts BerryVillage_MapScripts {
     
 }
-
-const LITTLE_BOY = 15
-const DAD = 16
 
 script BerryVillage_EventScript_Guy {
     lockall
@@ -23,6 +23,8 @@ script BerryVillage_EventScript_Lady {
 
 script BerryVillage_EventScript_LittleBoy {
     lockall
+    setvar(VAR_BERRY_VILLAGE_STATE, 1)
+    setflag(FLAG_BERRY_VILLAGE_BOY)
     msgbox(format("You just don't know how awesome I am at Pokémon battling!"))
     applymovement(LITTLE_BOY, BerryVillage_Movement_Littleboy)
     waitmovement(0)
@@ -35,12 +37,12 @@ script BerryVillage_EventScript_LittleBoy {
 }
 
 movement BerryVillage_Movement_Littleboy {
-    walk_fast_up * 5
+    walk_fast_up * 2
     walk_fast_left * 7
 }
 
 movement BerryVillage_Movement_Dad1 {
-    walk_up * 5
+    walk_up * 2
     face_left
 }
 

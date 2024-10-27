@@ -20,6 +20,8 @@ BerryVillage_EventScript_Lady::
 
 BerryVillage_EventScript_LittleBoy::
 	lockall
+	setvar VAR_BERRY_VILLAGE_STATE, 1
+	setflag FLAG_BERRY_VILLAGE_BOY
 	msgbox BerryVillage_EventScript_LittleBoy_Text_0
 	applymovement 15, BerryVillage_Movement_Littleboy
 	waitmovement 0
@@ -34,9 +36,6 @@ BerryVillage_EventScript_LittleBoy::
 BerryVillage_Movement_Littleboy:
 	walk_fast_up
 	walk_fast_up
-	walk_fast_up
-	walk_fast_up
-	walk_fast_up
 	walk_fast_left
 	walk_fast_left
 	walk_fast_left
@@ -47,9 +46,6 @@ BerryVillage_Movement_Littleboy:
 	step_end
 
 BerryVillage_Movement_Dad1:
-	walk_up
-	walk_up
-	walk_up
 	walk_up
 	walk_up
 	face_left
