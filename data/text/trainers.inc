@@ -3402,31 +3402,31 @@ Route123_Text_CameronPostRematch:
 	.string "I should train at MT. PYRE…\n"
 	.string "I'll never beat you this way…$"
 
-Route123_Text_JackiIntro:
+Route123_Text_jaxIntro:
 	.string "Don't be too happy if your POKéMON\n"
 	.string "develop psychic powers.\p"
 	.string "You need to refine those powers to\n"
 	.string "make them really useful.$"
 
-Route123_Text_JackiDefeat:
+Route123_Text_jaxDefeat:
 	.string "Overwhelmed!$"
 
-Route123_Text_JackiPostBattle:
+Route123_Text_jaxPostBattle:
 	.string "We all have psychic powers.\n"
 	.string "We've just forgotten how to use them.$"
 
-Route123_Text_JackiRegister:
+Route123_Text_jaxRegister:
 	.string "I would like to face you again.\n"
 	.string "Is that okay with you?$"
 
-Route123_Text_JackiRematchIntro:
+Route123_Text_jaxRematchIntro:
 	.string "Have you awoken the psychic powers\n"
 	.string "within you?$"
 
-Route123_Text_JackiRematchDefeat:
+Route123_Text_jaxRematchDefeat:
 	.string "Astounding!$"
 
-Route123_Text_JackiPostRematch:
+Route123_Text_jaxPostRematch:
 	.string "Your power with POKéMON…\n"
 	.string "That could be a psychic power, too.$"
 

@@ -43,16 +43,6 @@ Route123_EventScript_BerryMastersHouseSign::
 	msgbox Route123_Text_BerryMastersHouse, MSGBOX_SIGN
 	end
 
-Route123_EventScript_Braxton::
-	trainerbattle_single TRAINER_BRAXTON, Route123_Text_BraxtonIntro, Route123_Text_BraxtonDefeat
-	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route123_EventScript_Violet::
-	trainerbattle_single TRAINER_VIOLET, Route123_Text_VioletIntro, Route123_Text_VioletDefeat
-	msgbox Route123_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 // Route123_EventScript_Cameron::
 // 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
 // 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -74,24 +64,24 @@ Route123_EventScript_Violet::
 // 	msgbox Route123_Text_CameronPostRematch, MSGBOX_AUTOCLOSE
 // 	end
 
-// Route123_EventScript_Jacki::
-//	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
+// Route123_EventScript_jax::
+//	trainerbattle_single TRAINER_jax_1, Route123_Text_jaxIntro, Route123_Text_jaxDefeat, Route123_EventScript_Registerjax
 //	specialvar VAR_RESULT, ShouldTryRematchBattle
-//	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchJacki
+//	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_Rematchjax
 //	release
 //	end
 
-Route123_EventScript_RegisterJacki::
+Route123_EventScript_Registerjax::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route123_Text_JackiRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JACKI_1
+	msgbox Route123_Text_jaxRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAX_1
 	release
 	end
 
-Route123_EventScript_RematchJacki::
-	trainerbattle_rematch TRAINER_JACKI_1, Route123_Text_JackiRematchIntro, Route123_Text_JackiRematchDefeat
-	msgbox Route123_Text_JackiPostRematch, MSGBOX_AUTOCLOSE
+Route123_EventScript_Rematchjax::
+	trainerbattle_rematch TRAINER_JAX_1, Route123_Text_jaxRematchIntro, Route123_Text_jaxRematchDefeat
+	msgbox Route123_Text_jaxPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route123_EventScript_Miu::
@@ -117,11 +107,6 @@ Route123_EventScript_Alberto::
 Route123_EventScript_Ed::
 	trainerbattle_single TRAINER_ED, Route123_Text_EdIntro, Route123_Text_EdDefeat
 	msgbox Route123_Text_EdPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route123_EventScript_Kayley::
-	trainerbattle_single TRAINER_KAYLEY, Route123_Text_KayleyIntro, Route123_Text_KayleyDefeat
-	msgbox Route123_Text_KayleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route123_EventScript_Jonas::
@@ -235,6 +220,39 @@ script Route123_EventScript_BirchsRescue {
     end
 }
 
+script Route123_EventScript_GlassesGirl {
+	lock
+	faceplayer
+	if(flag(FLAG_RECEIVED_TM19) == FALSE){
+		msgbox(format("I think I lost my shades somewhere in the tall grass. I'm a total coward though, so I'm scared of the wild POKéMON there. Can you help me find my them?"))
+		checkitem(ITEM_BLACK_GLASSES)
+		if(var(VAR_RESULT==TRUE)) {
+			msgbox(format("Those BLACKGLASSES! Can I have them? I'll heal you up any time you like in exchange."), MSGBOX_YESNO)
+			if(var(VAR_RESULT)==1) {
+				msgbox(format("Thank you so much! Here, let me heal your POKéMON."))
+				removeitem(ITEM_BLACK_GLASSES)
+				special(HealPlayerParty)
+				waitmessage
+				setflag(FLAG_RECEIVED_TM19)
+				msgbox(format("Don't I look stylish with my shades?"))
+			} else {
+				msgbox(format("Rude! I'm never speaking to you again. You know, unless you give me the BLACKGLASSES."))
+			}
+		} 
+	} else {
+		msgbox(format("Do you need another heal?"), MSGBOX_YESNO)
+		if(var(VAR_RESULT) == 1) {
+			msgbox(format("You got it!"))
+			special(HealPlayerParty)
+			waitmessage
+		} else {
+			msgbox(format("If you change your mind, let me know."))
+		}
+	}
+	release
+	end
+}
+
 script Route123_EventScript_Davis{
 	trainerbattle_single(TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat)
 	msgbox(Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE)
@@ -247,11 +265,11 @@ script Route123_EventScript_Wendell{
 	end
 }
 
-script Route123_EventScript_Jacki {
-	trainerbattle_single(TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki)
+script Route123_EventScript_Jax {
+	trainerbattle_single(TRAINER_JAX_1, format("Let's work ourselves to the bone."), format("I'm exhausted. Fantastic!")) //Route123_EventScript_Registerjax
 	//specialvar VAR_RESULT, ShouldTryRematchBattle
-	//goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchJacki
-	msgbox(Route123_Text_JackiPostBattle, MSGBOX_DEFAULT)
+	//goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_Rematchjax
+	msgbox(format("Nothing beats coming home tired after a hard days work."), MSGBOX_DEFAULT)
 	release
 	end
 }
@@ -261,7 +279,26 @@ script Route123_EventScript_Frederick{
 	msgbox(format("The road has been built on time and on schedule. It's almost as good as my report!"), MSGBOX_AUTOCLOSE)
 	end
 }
+
+script Route123_EventScript_Davido {
+	trainerbattle_single(TRAINER_DAVIDO, format("You! Don't get in the way while we're working!"), format("Well, someone who can handle a POKéMON battle can hang around."))
+	msgbox(format("Sorry for startlin' you, we're just very anxious to get the job done on time."), MSGBOX_AUTOCLOSE)
+	end
+}
 	
+script Route123_EventScript_Caleb {
+	trainerbattle_single(TRAINER_CALEB, format("Moving dirt is hard work. Battling is easier!"), format("Maybe moving dirt is easier after all."))
+	msgbox(format("We're building the future of Hoenn here. I'm proud to be a part of it."), MSGBOX_AUTOCLOSE)
+	end
+}
+
+script Route123_EventScript_Braxton {
+	trainerbattle_single(TRAINER_BRAXTON, format("Let's battle while the boss is away."), format("Good fight!"))
+	msgbox(format("We have a strong union, so the boss can't hassle us too much."), MSGBOX_AUTOCLOSE)
+	end
+}
+	
+
 
 movement BirchChase {
     walk_right * 7

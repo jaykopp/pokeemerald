@@ -40,7 +40,7 @@
 #define TRAINER_DAISY                        36
 #define TRAINER_ROSE_1                       37
 #define TRAINER_FELIX                        38
-#define TRAINER_VIOLET                       39
+#define TRAINER_DAVIDO                       39
 #define TRAINER_ROSE_2                       40
 #define TRAINER_ROSE_3                       41
 #define TRAINER_ROSE_4                       42
@@ -253,11 +253,11 @@
 #define TRAINER_MAURA                       246
 #define TRAINER_KAYLA                       247
 #define TRAINER_ALEXIS                      248
-#define TRAINER_JACKI_1                     249
-#define TRAINER_JACKI_2                     250
-#define TRAINER_JACKI_3                     251
-#define TRAINER_JACKI_4                     252
-#define TRAINER_JACKI_5                     253
+#define TRAINER_JAX_1                     249
+#define TRAINER_JAX_2                     250
+#define TRAINER_JAX_3                     251
+#define TRAINER_JAX_4                     252
+#define TRAINER_JAX_5                     253
 #define TRAINER_WALTER_1                    254
 #define TRAINER_MICAH                       255
 #define TRAINER_THOMAS                      256
@@ -509,7 +509,7 @@
 #define TRAINER_ANNIKA                      502
 #define TRAINER_JAZMYN                      503
 #define TRAINER_JONAS                       504
-#define TRAINER_KAYLEY                      505
+#define TRAINER_CALEB                      505
 #define TRAINER_AURON                       506
 #define TRAINER_KELVIN                      507
 #define TRAINER_MARLEY                      508

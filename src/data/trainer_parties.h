@@ -443,7 +443,7 @@ static const struct TrainerMon sParty_Felix[] = {
     }
 };
 
-static const struct TrainerMon sParty_Violet[] = {
+static const struct TrainerMon sParty_Davido[] = {
     {
     .iv = 0,
     .lvl = 5,
@@ -881,13 +881,13 @@ static const struct TrainerMon sParty_Braxton[] = {
     .iv = 100,
     .lvl = 6,
     .species = SPECIES_VOLTORB,
-    .moves = {MOVE_TACKLE, MOVE_CHARM, MOVE_ICY_WIND, MOVE_NONE}
+    .moves = {MOVE_TACKLE, MOVE_SCREECH, MOVE_THUNDER_WAVE, MOVE_NONE}
     },
     {
     .iv = 100,
     .lvl = 6,
     .species = SPECIES_TYROGUE,
-    .moves = {MOVE_THUNDER_SHOCK, MOVE_CHARM, MOVE_TAIL_WHIP, MOVE_ENCORE}
+    .moves = {MOVE_TACKLE, MOVE_MACH_PUNCH, MOVE_NONE, MOVE_NONE}
     }
 };
 
@@ -3115,7 +3115,7 @@ static const struct TrainerMon sParty_Alexis[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jacki1[] = {
+static const struct TrainerMon sParty_jax1[] = {
     {
     .iv = 0,
     .lvl = 5,
@@ -3128,7 +3128,7 @@ static const struct TrainerMon sParty_Jacki1[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jacki2[] = {
+static const struct TrainerMon sParty_jax2[] = {
     {
     .iv = 10,
     .lvl = 34,
@@ -3141,7 +3141,7 @@ static const struct TrainerMon sParty_Jacki2[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jacki3[] = {
+static const struct TrainerMon sParty_jax3[] = {
     {
     .iv = 20,
     .lvl = 37,
@@ -3154,7 +3154,7 @@ static const struct TrainerMon sParty_Jacki3[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jacki4[] = {
+static const struct TrainerMon sParty_jax4[] = {
     {
     .iv = 30,
     .lvl = 40,
@@ -3167,7 +3167,7 @@ static const struct TrainerMon sParty_Jacki4[] = {
     }
 };
 
-static const struct TrainerMon sParty_Jacki5[] = {
+static const struct TrainerMon sParty_jax5[] = {
     {
     .iv = 40,
     .lvl = 43,
@@ -6644,7 +6644,7 @@ static const struct TrainerMon sParty_Jonas[] = {
     }
 };
 
-static const struct TrainerMon sParty_Kayley[] = {
+static const struct TrainerMon sParty_Caleb[] = {
     {
     .iv = 0,
     .lvl = 5,

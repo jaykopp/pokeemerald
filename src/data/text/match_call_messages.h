@@ -123,10 +123,10 @@ const u8 gText_MatchCallPsychic_Cameron_Pokemon[] = _("Ones with weird powers.")
 const u8 gText_MatchCallPsychic_Cameron_Intro1[] = _("I can see through exactly");
 const u8 gText_MatchCallPsychic_Cameron_Intro2[] = _("what you're thinking!");
 
-const u8 gText_MatchCallPsychic_Jacki_Strategy[] = _("Battle at full power.");
-const u8 gText_MatchCallPsychic_Jacki_Pokemon[] = _("POKéMON of many mysteries.");
-const u8 gText_MatchCallPsychic_Jacki_Intro1[] = _("When we spoke, I was really");
-const u8 gText_MatchCallPsychic_Jacki_Intro2[] = _("using telepathy.");
+const u8 gText_MatchCallPsychic_JAX_Strategy[] = _("Battle at full power.");
+const u8 gText_MatchCallPsychic_JAX_Pokemon[] = _("POKéMON of many mysteries.");
+const u8 gText_MatchCallPsychic_JAX_Intro1[] = _("When we spoke, I was really");
+const u8 gText_MatchCallPsychic_JAX_Intro2[] = _("using telepathy.");
 
 const u8 gText_MatchCallGentleman_Walter_Strategy[] = _("Calm and collected.");
 const u8 gText_MatchCallGentleman_Walter_Pokemon[] = _("POKéMON of distinction.");
@@ -415,7 +415,7 @@ const u8 *const gMatchCallFlavorTexts[REMATCH_TABLE_ENTRIES][CHECK_PAGE_ENTRY_CO
     [REMATCH_JOHN_AND_JAY] = MCFLAVOR(OldCouple_JohnAndJay),
     [REMATCH_JEFFREY] = MCFLAVOR(BugManiac_Jeffrey),
     [REMATCH_CAMERON] = MCFLAVOR(Psychic_Cameron),
-    [REMATCH_JACKI] = MCFLAVOR(Psychic_Jacki),
+    [REMATCH_JAX] = MCFLAVOR(Psychic_JAX),
     [REMATCH_WALTER] = MCFLAVOR(Gentleman_Walter),
     [REMATCH_KAREN] = MCFLAVOR(SchoolKid_Karen),
     [REMATCH_JERRY] = MCFLAVOR(SchoolKid_Jerry),

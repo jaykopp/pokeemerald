@@ -507,17 +507,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Felix},
     },
 
-    [TRAINER_VIOLET] =
+    [TRAINER_DAVIDO] =
     {
-        .trainerClass = TRAINER_CLASS_AROMA_LADY,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_AROMA_LADY,
-        .trainerName = _("VIOLET"),
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
+        .trainerName = _("DAVIDO"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Violet),
-        .party = {.TrainerMon = sParty_Violet},
+        .partySize = ARRAY_COUNT(sParty_Davido),
+        .party = {.TrainerMon = sParty_Davido},
     },
 
     [TRAINER_ROSE_2] =
@@ -977,9 +977,9 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_BRAXTON] =
     {
-        .trainerClass = TRAINER_CLASS_COOLTRAINER,
-        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_COOL,
-        .trainerPic = TRAINER_PIC_COOLTRAINER_M,
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
         .trainerName = _("BRAXTON"),
         .items = {},
         .doubleBattle = FALSE,
@@ -3238,7 +3238,7 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Alexis},
     },
 
-    [TRAINER_JACKI_1] =
+    [TRAINER_JAX_1] =
     {
         .trainerClass = TRAINER_CLASS_WORKER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
@@ -3247,60 +3247,60 @@ const struct Trainer gTrainers[] = {
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
-        .partySize = ARRAY_COUNT(sParty_Jacki1),
-        .party = {.TrainerMon = sParty_Jacki1},
+        .partySize = ARRAY_COUNT(sParty_jax1),
+        .party = {.TrainerMon = sParty_jax1},
     },
 
-    [TRAINER_JACKI_2] =
+    [TRAINER_JAX_2] =
     {
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_F,
-        .trainerName = _("JACKI"),
+        .trainerName = _("jax"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Jacki2),
-        .party = {.TrainerMon = sParty_Jacki2},
+        .partySize = ARRAY_COUNT(sParty_jax2),
+        .party = {.TrainerMon = sParty_jax2},
     },
 
-    [TRAINER_JACKI_3] =
+    [TRAINER_JAX_3] =
     {
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_F,
-        .trainerName = _("JACKI"),
+        .trainerName = _("jax"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Jacki3),
-        .party = {.TrainerMon = sParty_Jacki3},
+        .partySize = ARRAY_COUNT(sParty_jax3),
+        .party = {.TrainerMon = sParty_jax3},
     },
 
-    [TRAINER_JACKI_4] =
+    [TRAINER_JAX_4] =
     {
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_F,
-        .trainerName = _("JACKI"),
+        .trainerName = _("jax"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Jacki4),
-        .party = {.TrainerMon = sParty_Jacki4},
+        .partySize = ARRAY_COUNT(sParty_jax4),
+        .party = {.TrainerMon = sParty_jax4},
     },
 
-    [TRAINER_JACKI_5] =
+    [TRAINER_JAX_5] =
     {
         .trainerClass = TRAINER_CLASS_PSYCHIC,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_INTENSE,
         .trainerPic = TRAINER_PIC_PSYCHIC_F,
-        .trainerName = _("JACKI"),
+        .trainerName = _("jax"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Jacki5),
-        .party = {.TrainerMon = sParty_Jacki5},
+        .partySize = ARRAY_COUNT(sParty_jax5),
+        .party = {.TrainerMon = sParty_jax5},
     },
 
     [TRAINER_WALTER_1] =
@@ -6566,17 +6566,17 @@ const struct Trainer gTrainers[] = {
         .party = {.TrainerMon = sParty_Jonas},
     },
 
-    [TRAINER_KAYLEY] =
+    [TRAINER_CALEB] =
     {
-        .trainerClass = TRAINER_CLASS_PARASOL_LADY,
-        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_PARASOL_LADY,
-        .trainerName = _("KAYLEY"),
+        .trainerClass = TRAINER_CLASS_WORKER,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_HIKER,
+        .trainerPic = TRAINER_PIC_WORKER,
+        .trainerName = _("CALEB"),
         .items = {},
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
-        .partySize = ARRAY_COUNT(sParty_Kayley),
-        .party = {.TrainerMon = sParty_Kayley},
+        .partySize = ARRAY_COUNT(sParty_Caleb),
+        .party = {.TrainerMon = sParty_Caleb},
     },
 
     [TRAINER_AURON] =

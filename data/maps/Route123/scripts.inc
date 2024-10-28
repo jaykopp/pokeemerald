@@ -47,11 +47,6 @@ Route123_EventScript_Braxton::
 	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route123_EventScript_Violet::
-	trainerbattle_single TRAINER_VIOLET, Route123_Text_VioletIntro, Route123_Text_VioletDefeat
-	msgbox Route123_Text_VioletPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 // Route123_EventScript_Cameron::
 // 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
 // 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -73,24 +68,24 @@ Route123_EventScript_Violet::
 // 	msgbox Route123_Text_CameronPostRematch, MSGBOX_AUTOCLOSE
 // 	end
 
-// Route123_EventScript_Jacki::
-//	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
+// Route123_EventScript_jax::
+//	trainerbattle_single TRAINER_jax_1, Route123_Text_jaxIntro, Route123_Text_jaxDefeat, Route123_EventScript_Registerjax
 //	specialvar VAR_RESULT, ShouldTryRematchBattle
-//	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_RematchJacki
+//	goto_if_eq VAR_RESULT, TRUE, Route123_EventScript_Rematchjax
 //	release
 //	end
 
-Route123_EventScript_RegisterJacki::
+Route123_EventScript_Registerjax::
 	special PlayerFaceTrainerAfterBattle
 	waitmovement 0
-	msgbox Route123_Text_JackiRegister, MSGBOX_DEFAULT
-	register_matchcall TRAINER_JACKI_1
+	msgbox Route123_Text_jaxRegister, MSGBOX_DEFAULT
+	register_matchcall TRAINER_JAX_1
 	release
 	end
 
-Route123_EventScript_RematchJacki::
-	trainerbattle_rematch TRAINER_JACKI_1, Route123_Text_JackiRematchIntro, Route123_Text_JackiRematchDefeat
-	msgbox Route123_Text_JackiPostRematch, MSGBOX_AUTOCLOSE
+Route123_EventScript_Rematchjax::
+	trainerbattle_rematch TRAINER_JAX_1, Route123_Text_jaxRematchIntro, Route123_Text_jaxRematchDefeat
+	msgbox Route123_Text_jaxPostRematch, MSGBOX_AUTOCLOSE
 	end
 
 Route123_EventScript_Miu::
@@ -116,11 +111,6 @@ Route123_EventScript_Alberto::
 Route123_EventScript_Ed::
 	trainerbattle_single TRAINER_ED, Route123_Text_EdIntro, Route123_Text_EdDefeat
 	msgbox Route123_Text_EdPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route123_EventScript_Kayley::
-	trainerbattle_single TRAINER_KAYLEY, Route123_Text_KayleyIntro, Route123_Text_KayleyDefeat
-	msgbox Route123_Text_KayleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route123_EventScript_Jonas::
@@ -248,9 +238,9 @@ Route123_EventScript_Wendell::
 	end
 
 
-Route123_EventScript_Jacki::
-	trainerbattle_single TRAINER_JACKI_1, Route123_Text_JackiIntro, Route123_Text_JackiDefeat, Route123_EventScript_RegisterJacki
-	msgbox Route123_Text_JackiPostBattle, MSGBOX_DEFAULT
+Route123_EventScript_Jax::
+	trainerbattle_single TRAINER_JAX_1, Route123_EventScript_Jax_Text_0, Route123_Text_jaxDefeat, Route123_EventScript_Registerjax
+	msgbox Route123_Text_jaxPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
@@ -258,6 +248,18 @@ Route123_EventScript_Jacki::
 Route123_EventScript_Frederick::
 	trainerbattle_single TRAINER_FREDRICK, Route123_EventScript_Frederick_Text_0, Route123_EventScript_Frederick_Text_1
 	msgbox Route123_EventScript_Frederick_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route123_EventScript_Davido::
+	trainerbattle_single TRAINER_DAVIDO, Route123_EventScript_Davido_Text_0, Route123_EventScript_Davido_Text_1
+	msgbox Route123_EventScript_Davido_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route123_EventScript_Caleb::
+	trainerbattle_single TRAINER_CALEB, Route123_EventScript_Caleb_Text_0, Route123_EventScript_Caleb_Text_1
+	msgbox Route123_EventScript_Caleb_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -315,6 +317,9 @@ Route123_EventScript_Wendell_Text_1:
 Route123_EventScript_Wendell_Text_2:
 	.string "Battling can be so tiresome as well...$"
 
+Route123_EventScript_Jax_Text_0:
+	.string "$"
+
 Route123_EventScript_Frederick_Text_0:
 	.string "I'm doing a school project on the new\n"
 	.string "road they're building. Battle me in the\l"
@@ -327,3 +332,26 @@ Route123_EventScript_Frederick_Text_2:
 	.string "The road has been built on time and on\n"
 	.string "schedule. It's almost as good as my\l"
 	.string "report!$"
+
+Route123_EventScript_Davido_Text_0:
+	.string "You! Don't get in the way while we're\n"
+	.string "working!$"
+
+Route123_EventScript_Davido_Text_1:
+	.string "Well, someone who can handle a POKéMON\n"
+	.string "battle can hang around.$"
+
+Route123_EventScript_Davido_Text_2:
+	.string "Sorry for startlin' you, we're just very\n"
+	.string "anxious to get the job done on time.$"
+
+Route123_EventScript_Caleb_Text_0:
+	.string "Moving dirt is hard work. Battling is\n"
+	.string "easier!$"
+
+Route123_EventScript_Caleb_Text_1:
+	.string "Maybe moving dirt is easier after all.$"
+
+Route123_EventScript_Caleb_Text_2:
+	.string "We're building the future of Hoenn here.\n"
+	.string "I'm proud to be a part of it.$"
