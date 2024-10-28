@@ -12,7 +12,7 @@ script BerryVillage_ConstructionHouse_Worker1 {
 script BerryVillage_ConstructionHouse_Worker2 {
     lock
     faceplayer
-    msgbox(format("I am telling you, constructing this road between LILYCOVE and MAUVILLE has been tough!\n I can't wait for it to be over!"))
+    msgbox(format("I'm telling you, constructing this road between LILYCOVE and MAUVILLE has been tough!\n I can't wait for it to be over!"))
     releaseall
     end
 }

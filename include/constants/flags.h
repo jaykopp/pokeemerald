@@ -251,7 +251,7 @@
 #define FLAG_RECEIVED_TM27                   0xE5
 #define FLAG_RECEIVED_TM36                   0xE6
 #define FLAG_RECEIVED_TM05                   0xE7
-#define FLAG_RECEIVED_TM19                   0xE8
+#define FLAG_BLACK_GLASSES_GIRL                   0xE8
 
 #define FLAG_BERRY_VILLAGE_BOY               0xE9 // Unused Flag
 
