@@ -42,11 +42,6 @@ Route123_EventScript_BerryMastersHouseSign::
 	msgbox Route123_Text_BerryMastersHouse, MSGBOX_SIGN
 	end
 
-Route123_EventScript_Braxton::
-	trainerbattle_single TRAINER_BRAXTON, Route123_Text_BraxtonIntro, Route123_Text_BraxtonDefeat
-	msgbox Route123_Text_BraxtonPostBattle, MSGBOX_AUTOCLOSE
-	end
-
 // Route123_EventScript_Cameron::
 // 	trainerbattle_single TRAINER_CAMERON_1, Route123_Text_CameronIntro, Route123_Text_CameronDefeat, Route123_EventScript_RegisterCameron
 // 	specialvar VAR_RESULT, ShouldTryRematchBattle
@@ -226,6 +221,48 @@ Route123_EventScript_BirchsRescue_4:
 	goto Route123_EventScript_BirchsRescue_1
 
 
+Route123_EventScript_GlassesGirl::
+	lock
+	faceplayer
+	goto_if_unset FLAG_BLACK_GLASSES_GIRL, Route123_EventScript_GlassesGirl_2
+	msgbox Route123_EventScript_GlassesGirl_Text_5, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Route123_EventScript_GlassesGirl_7
+	msgbox Route123_EventScript_GlassesGirl_Text_7
+Route123_EventScript_GlassesGirl_1:
+	release
+	end
+
+Route123_EventScript_GlassesGirl_2:
+	msgbox Route123_EventScript_GlassesGirl_Text_0
+	checkitem ITEM_BLACK_GLASSES
+	compare VAR_RESULT, 1
+	goto_if_eq Route123_EventScript_GlassesGirl_5
+	goto Route123_EventScript_GlassesGirl_1
+
+Route123_EventScript_GlassesGirl_5:
+	msgbox Route123_EventScript_GlassesGirl_Text_1, MSGBOX_YESNO
+	compare VAR_RESULT, 1
+	goto_if_eq Route123_EventScript_GlassesGirl_10
+	msgbox Route123_EventScript_GlassesGirl_Text_4
+	goto Route123_EventScript_GlassesGirl_1
+
+Route123_EventScript_GlassesGirl_7:
+	msgbox Route123_EventScript_GlassesGirl_Text_6
+	special HealPlayerParty
+	waitmessage
+	goto Route123_EventScript_GlassesGirl_1
+
+Route123_EventScript_GlassesGirl_10:
+	msgbox Route123_EventScript_GlassesGirl_Text_2
+	removeitem ITEM_BLACK_GLASSES
+	special HealPlayerParty
+	waitmessage
+	setflag FLAG_BLACK_GLASSES_GIRL
+	msgbox Route123_EventScript_GlassesGirl_Text_3
+	goto Route123_EventScript_GlassesGirl_1
+
+
 Route123_EventScript_Davis::
 	trainerbattle_single TRAINER_DAVIS, Route123_Text_DavisIntro, Route123_Text_DavisDefeat
 	msgbox Route123_Text_DavisPostBattle, MSGBOX_AUTOCLOSE
@@ -239,8 +276,8 @@ Route123_EventScript_Wendell::
 
 
 Route123_EventScript_Jax::
-	trainerbattle_single TRAINER_JAX_1, Route123_EventScript_Jax_Text_0, Route123_Text_jaxDefeat, Route123_EventScript_Registerjax
-	msgbox Route123_Text_jaxPostBattle, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_JAX_1, Route123_EventScript_Jax_Text_0, Route123_EventScript_Jax_Text_1
+	msgbox Route123_EventScript_Jax_Text_2, MSGBOX_DEFAULT
 	release
 	end
 
@@ -260,6 +297,12 @@ Route123_EventScript_Davido::
 Route123_EventScript_Caleb::
 	trainerbattle_single TRAINER_CALEB, Route123_EventScript_Caleb_Text_0, Route123_EventScript_Caleb_Text_1
 	msgbox Route123_EventScript_Caleb_Text_2, MSGBOX_AUTOCLOSE
+	end
+
+
+Route123_EventScript_Braxton::
+	trainerbattle_single TRAINER_BRAXTON, Route123_EventScript_Braxton_Text_0, Route123_EventScript_Braxton_Text_1
+	msgbox Route123_EventScript_Braxton_Text_2, MSGBOX_AUTOCLOSE
 	end
 
 
@@ -307,6 +350,39 @@ Route123_EventScript_BirchsRescue_Text_4:
 	.string "have caught. Come visit me in\l"
 	.string "Littleroot Town if you get the chance.$"
 
+Route123_EventScript_GlassesGirl_Text_0:
+	.string "I think I lost my shades somewhere in\n"
+	.string "the tall grass. I'm a total coward\l"
+	.string "though, so I'm scared of the wild\l"
+	.string "POKéMON there. Can you help me find my\l"
+	.string "them?$"
+
+Route123_EventScript_GlassesGirl_Text_1:
+	.string "Those BLACKGLASSES! Can I have them?\n"
+	.string "I'll heal you up any time you like in\l"
+	.string "exchange.$"
+
+Route123_EventScript_GlassesGirl_Text_2:
+	.string "Thank you so much! Here, let me heal\n"
+	.string "your POKéMON.$"
+
+Route123_EventScript_GlassesGirl_Text_3:
+	.string "Don't I look stylish with my shades?$"
+
+Route123_EventScript_GlassesGirl_Text_4:
+	.string "Rude! I'm never speaking to you again.\n"
+	.string "You know, unless you give me the\l"
+	.string "BLACKGLASSES.$"
+
+Route123_EventScript_GlassesGirl_Text_5:
+	.string "Do you need another heal?$"
+
+Route123_EventScript_GlassesGirl_Text_6:
+	.string "You got it!$"
+
+Route123_EventScript_GlassesGirl_Text_7:
+	.string "If you change your mind, let me know.$"
+
 Route123_EventScript_Wendell_Text_0:
 	.string "I'm tired of working. Let's battle\n"
 	.string "instead!$"
@@ -318,7 +394,14 @@ Route123_EventScript_Wendell_Text_2:
 	.string "Battling can be so tiresome as well...$"
 
 Route123_EventScript_Jax_Text_0:
-	.string "$"
+	.string "Let's work ourselves to the bone.$"
+
+Route123_EventScript_Jax_Text_1:
+	.string "I'm exhausted. Fantastic!$"
+
+Route123_EventScript_Jax_Text_2:
+	.string "Nothing beats coming home tired after a\n"
+	.string "hard days work.$"
 
 Route123_EventScript_Frederick_Text_0:
 	.string "I'm doing a school project on the new\n"
@@ -355,3 +438,13 @@ Route123_EventScript_Caleb_Text_1:
 Route123_EventScript_Caleb_Text_2:
 	.string "We're building the future of Hoenn here.\n"
 	.string "I'm proud to be a part of it.$"
+
+Route123_EventScript_Braxton_Text_0:
+	.string "Let's battle while the boss is away.$"
+
+Route123_EventScript_Braxton_Text_1:
+	.string "Good fight!$"
+
+Route123_EventScript_Braxton_Text_2:
+	.string "We have a strong union, so the boss\n"
+	.string "can't hassle us too much.$"

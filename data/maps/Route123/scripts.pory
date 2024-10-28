@@ -226,9 +226,9 @@ script Route123_EventScript_GlassesGirl {
 	if(flag(FLAG_BLACK_GLASSES_GIRL) == FALSE){
 		msgbox(format("I think I lost my shades somewhere in the tall grass. I'm a total coward though, so I'm scared of the wild POKéMON there. Can you help me find my them?"))
 		checkitem(ITEM_BLACK_GLASSES)
-		if(var(VAR_RESULT==TRUE)) {
+		if(var(VAR_RESULT) == 1) {
 			msgbox(format("Those BLACKGLASSES! Can I have them? I'll heal you up any time you like in exchange."), MSGBOX_YESNO)
-			if(var(VAR_RESULT)==1) {
+			if(var(VAR_RESULT) == 1) {
 				msgbox(format("Thank you so much! Here, let me heal your POKéMON."))
 				removeitem(ITEM_BLACK_GLASSES)
 				special(HealPlayerParty)

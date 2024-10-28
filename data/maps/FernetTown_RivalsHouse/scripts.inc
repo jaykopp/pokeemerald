@@ -17,20 +17,21 @@ FernetTown_RivalsHouse_StarterPick::
 	waitmovement 0
 	applymovement 1, FernetTown_RivalsHouse_TownElder_Movement1
 	waitmovement 0
-	msgbox FernetTown_RivalsHouse_StarterPick_Text_0
+	msgbox FernetTown_RivalsHouse_StarterPick_Text_0, MSGBOX_AUTOCLOSE
+	waitmessage
 	applymovement 1, FernetTown_RivalsHouse_TownElder_Movement2
+	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, FernetTown_RivalsHouse_Player_Movement
 	waitmovement 0
-	faceplayer
+	applymovement 1, FernetTown_RivalsHouse_TownElder_Movement3
 	msgbox FernetTown_RivalsHouse_StarterPick_Text_1
 	setvar VAR_FERNET_RIVAL_HOUSE_STATE, 1
-	setvar VAR_FERNET_TOWN_ELDER, 1
-	releaseall
+	release
 	end
 
 FernetTown_RivalsHouse_StarterPick_1:
 	lock
-	releaseall
+	release
 	end
 
 
@@ -307,11 +308,14 @@ FernetTown_RivalsHouse_TownElder_Movement2:
 	walk_left
 	step_end
 
+FernetTown_RivalsHouse_TownElder_Movement3:
+	face_down
+	step_end
+
 FernetTown_RivalsHouse_Player_Movement:
 	walk_up
 	walk_up
 	walk_left
-	face_up
 	step_end
 
 FernetTown_RivalsHouse_StarterPick_Text_0:

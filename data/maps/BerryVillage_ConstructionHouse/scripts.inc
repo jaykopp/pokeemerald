@@ -41,7 +41,7 @@ BerryVillage_ConstructionHouse_Worker1_Text_0:
 	.string "the job is done?$"
 
 BerryVillage_ConstructionHouse_Worker2_Text_0:
-	.string "I am telling you, constructing this road\n"
+	.string "I'm telling you, constructing this road\n"
 	.string "between LILYCOVE and MAUVILLE has\l"
 	.string "been tough!\n"
 	.string "I can't wait for it to be over!$"
